@@ -1,9 +1,0 @@
-HEADER
-"PSFversion" "1.00"
-"I6n" "project_1_optimized"
-"N4n N3n N2n N1n N0n" "NCSU_Analog_Parts_nmos4_spectre"
-"V2n V1n V0n" "NCSU_Analog_Parts_vdc_spectre"
-"C3n C2n C1n C0n" "NCSU_Analog_Parts_cap_spectre"
-"V7n V5n V10n V11n" "NCSU_Analog_Parts_vpulse_spectre"
-"V6n" "NCSU_Analog_Parts_vsin_spectre"
-"P4n P3n P0n P1n P2n" "NCSU_Analog_Parts_pmos4_spectre"

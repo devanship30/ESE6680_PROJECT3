@@ -1,9 +1,0 @@
-CADENCE IHNL11140
-$model
-ESE_6680/project_2/schematic project_2
-$endmodel
-$net
-gnd! 0
-$endnet
-$param
-$endparam

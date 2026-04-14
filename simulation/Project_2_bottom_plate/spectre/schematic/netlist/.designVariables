@@ -1,4 +1,0 @@
-parameters Cc=1.5p Cf=1p Ch=1p Cp=1p Ibias=40u L1_2=3u L3_4=3u L5=1.75u \
-    L6=1.625u L7=3u L8=3u Rc=4.15K W9=1u W10=1u W11=1u W12=1u W13=1u \
-    W14=1u W15=1u W16=1u W17=1u W18=1u W1_2=115u W3_4=16.5u W5=37u W6=60u \
-    W7=0.000268 W8=44u t=200n

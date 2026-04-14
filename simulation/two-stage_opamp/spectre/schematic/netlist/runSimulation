@@ -1,3 +1,0 @@
-# runSimulation scripts generated for spectre interactive are not intended to be used for command line.
-export LD_PRELOAD=/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools.lnx86/dfII/../lib/64bit/libstdc++.so:$LD_PRELOAD
- spectre  input.scs +escchars +log ../psf/spectre.out +inter=mpsc +mpssession=spectre0_629727_4  -format sst2 -raw ../psf  +lqtimeout 900 -maxw 5 -maxn 5   

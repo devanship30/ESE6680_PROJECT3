@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Generated on: Mar 29 19:07:51 2026
-// Design library name: ESE_6680
-// Design cell name: project_2_flip_around
-// Design view name: schematic
-simulator lang=spectre
-global 0

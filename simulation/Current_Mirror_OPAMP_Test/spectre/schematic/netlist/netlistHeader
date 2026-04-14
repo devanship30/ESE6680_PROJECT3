@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Generated on: Feb 22 23:18:26 2026
-// Design library name: ESE_6680
-// Design cell name: Current_Mirror_OPAMP_Test
-// Design view name: schematic
-simulator lang=spectre
-global 0

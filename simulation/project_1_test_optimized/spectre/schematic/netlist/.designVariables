@@ -1,3 +1,0 @@
-parameters Cc=1.1p Rc=4.15K Vdd=4 Ibias=40u L1_2=3u L3_4=3u L5=1.75u \
-    L6=1.625u L7=3u L8=3u Vcm=2.5 W1_2=115u W3_4=16.5u W5=37u W6=60u \
-    W7=0.000268 W8=44u

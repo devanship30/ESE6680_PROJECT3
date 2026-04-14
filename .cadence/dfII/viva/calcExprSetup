@@ -1,5 +1,0 @@
-artistResMgrCalcExprSetup("true" "plot" "E0" "getData("/Output2" ?result 'tran)")
-artistResMgrCalcExprSetup("true" "plot" "Slew Rate" "slewRate(VT("/Output2") 1 nil 4 nil 10 90 nil "time")")
-artistResMgrCalcExprSetup("true" "plot" "E1" "slewRate(VT("/Output2") 1 nil 4 nil 10 90 nil "time" )")
-artistResMgrCalcExprSetup("true" "plot" "Phase Margin" "phaseMargin(VF("/Output1"))")
-artistResMgrCalcExprSetup("true" "plot" "SLEW RATE" "slewRate(VT("/Output2") 1 nil 2 nil 10 90 nil "time")")

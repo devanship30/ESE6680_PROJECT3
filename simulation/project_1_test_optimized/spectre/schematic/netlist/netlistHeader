@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Generated on: Feb 22 17:51:13 2026
-// Design library name: ESE_6680
-// Design cell name: project_1_test_optimized
-// Design view name: schematic
-simulator lang=spectre
-global 0
