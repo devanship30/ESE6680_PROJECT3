@@ -1,0 +1,109 @@
+// Generated for: spectre
+// Generated on: Mar 29 19:07:51 2026
+// Design library name: ESE_6680
+// Design cell name: project_2_flip_around
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters W11=1u W12=1u W13=1u W14=1u W15=1u W16=1u W17=1u W18=1u W9=5u \
+    W10=15u Rc=4.15K W7=0.000268 W1_2=115u W6=60u W8=44u Ibias=40u W5=37u \
+    W3_4=16.5u L1_2=3u L3_4=3u L7=3u L8=3u L5=1.75u L6=1.625u t=200n Cc=3p \
+    Ch=1p
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE_6680
+// Cell name: project_1_optimized
+// View name: schematic
+subckt project_1_optimized Gnd Output Vdd Vin\+ Vin\-
+    M6 (Output net55 Gnd Gnd) ami06N w=W6 l=L6 as=W6 * 2.5 * (600n) ad=W6 * 2.5 * (600n) \
+         ps=(2 * W6) + (5 * (600n)) pd=(2 * W6) + (5 * (600n)) m=1 \
+        region=sat
+    M3 (net49 net49 Gnd Gnd) ami06N w=W3_4 l=L3_4 as=W3_4 * 2.5 * (600n) ad=W3_4 * 2.5 * (600n) \
+         ps=(2 * W3_4) + (5 * (600n)) pd=(2 * W3_4) + (5 * (600n)) m=1 \
+        region=sat
+    M4 (net55 net49 Gnd Gnd) ami06N w=W3_4 l=L3_4 as=W3_4 * 2.5 * (600n) ad=W3_4 * 2.5 * (600n) \
+         ps=(2 * W3_4) + (5 * (600n)) pd=(2 * W3_4) + (5 * (600n)) m=1 \
+        region=sat
+    Rc (net55 net59) resistor r=Rc m=1
+    Cc (net59 Output) capacitor c=Cc m=1
+    M7 (Output net48 Vdd Vdd) ami06P w=W7 l=L7 as=W7 * 2.5 * (600n) ad=W7 * 2.5 * (600n) \
+         ps=(2 * W7) + (5 * (600n)) pd=(2 * W7) + (5 * (600n)) m=1 \
+        region=sat
+    M8 (net48 net48 Vdd Vdd) ami06P w=W8 l=L8 as=W8 * 2.5 * (600n) ad=W8 * 2.5 * (600n) \
+         ps=(2 * W8) + (5 * (600n)) pd=(2 * W8) + (5 * (600n)) m=1 \
+        region=sat
+    M5 (net52 net48 Vdd Vdd) ami06P w=W5 l=L5 as=W5 * 2.5 * (600n) ad=W5 * 2.5 * (600n) \
+         ps=(2 * W5) + (5 * (600n)) pd=(2 * W5) + (5 * (600n)) m=1 \
+        region=sat
+    M1 (net49 Vin\- net52 net52) ami06P w=W1_2 l=L1_2 as=W1_2 * 2.5 * (600n) \
+         ad=W1_2 * 2.5 * (600n) ps=(2 * W1_2) + (5 * (600n)) pd=(2 * W1_2) + (5 * (600n)) \
+         m=1 region=sat
+    M2 (net55 Vin\+ net52 net52) ami06P w=W1_2 l=L1_2 as=W1_2 * 2.5 * (600n) \
+         ad=W1_2 * 2.5 * (600n) ps=(2 * W1_2) + (5 * (600n)) pd=(2 * W1_2) + (5 * (600n)) \
+         m=1 region=sat
+    I13 (net48 Gnd) isource type=dc dc=Ibias m=1
+ends project_1_optimized
+// End of subcircuit definition.
+
+// Library name: ESE_6680
+// Cell name: project_2_flip_around
+// View name: schematic
+V1 (net2 0) vsource type=dc dc=2.5
+V2 (VDD 0) vsource type=dc dc=5
+V0 (net14 0) vsource type=dc dc=2.5
+N4 (net7 CLK1 Output 0) ami06N w=W17 l=600n as=W17 * 2.5 * (600n) ad=W17 * 2.5 * (600n) \
+         ps=(2 * W17) + (5 * (600n)) pd=(2 * W17) + (5 * (600n)) m=1 \
+        region=sat
+N2 (net3 CLK2 net7 0) ami06N w=W15 l=600n as=W15 * 2.5 * (600n) ad=W15 * 2.5 * (600n) \
+         ps=(2 * W15) + (5 * (600n)) pd=(2 * W15) + (5 * (600n)) m=1 \
+        region=sat
+N1 (net2 CLK1\' net3 0) ami06N w=W13 l=600n as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+N0 (net6 CLK2 Output 0) ami06N w=W11 l=600n as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+N3 (Vin CLK1 net6 0) ami06N w=W9 l=600n as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+P4 (Output CLK2 net7 VDD) ami06P w=W18 l=600n as=W18 * 2.5 * (600n) ad=W18 * 2.5 * (600n) \
+         ps=(2 * W18) + (5 * (600n)) pd=(2 * W18) + (5 * (600n)) m=1 \
+        region=sat
+P2 (net7 CLK1 net3 VDD) ami06P w=W16 l=600n as=W16 * 2.5 * (600n) ad=W16 * 2.5 * (600n) \
+         ps=(2 * W16) + (5 * (600n)) pd=(2 * W16) + (5 * (600n)) m=1 \
+        region=sat
+P1 (net3 CLK2\' net2 VDD) ami06P w=W14 l=600n as=W14 * 2.5 * (600n) ad=W14 * 2.5 * (600n) \
+         ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) m=1 \
+        region=sat
+P0 (Output CLK1 net6 VDD) ami06P w=W12 l=600n as=W12 * 2.5 * (600n) ad=W12 * 2.5 * (600n) \
+         ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) m=1 \
+        region=sat
+P3 (net6 CLK2 Vin VDD) ami06P w=W10 l=600n as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat
+C2 (net6 net3) capacitor c=Ch m=1
+C3 (Output 0) capacitor c=1p m=1
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K
+I6 (0 Output VDD net14 net7) project_1_optimized
+V7 (CLK2\' 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=t/2 \
+        rise=1p fall=1p width=(t/2)-15n
+V5 (CLK1\' 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=0 \
+        rise=1p fall=1p width=(t/2)-15n
+V10 (CLK1 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=0 \
+        rise=1p fall=1p width=(t/2)-10n
+V11 (CLK2 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=t/2 \
+        rise=1p fall=1p width=(t/2)-10n
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=10u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

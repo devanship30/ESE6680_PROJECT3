@@ -1,0 +1,89 @@
+// Generated for: spectre
+// Generated on: Mar 31 10:47:00 2026
+// Design library name: ESE_6680
+// Design cell name: project_2_baseline_design
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters Cf=1.35p Ch=1.35p L10=0.6u L11=0.6u L12=0.6u L13=0.6u L14=0.6u \
+    L9=0.6u W10=45u W11=3.5u W12=5u W13=6.5u W14=7.5u W9=5u
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE_6680
+// Cell name: opamp_project_1
+// View name: schematic
+subckt opamp_project_1 Gnd Output Vdd Vin\+ Vin\-
+    M6 (Output net55 Gnd Gnd) ami06N w=60u l=1.65u as=9e-11 ad=9e-11 \
+        ps=123.000000u pd=123.000000u m=1 region=sat
+    M3 (net49 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    M4 (net55 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    Rc (net55 net59) resistor r=4.15K m=1
+    Cc (net59 Output) capacitor c=1.1p m=1
+    M7 (Output net48 Vdd Vdd) ami06P w=268.05u l=3u as=4.02075e-10 \
+        ad=4.02075e-10 ps=539.1u pd=539.1u m=1 region=sat
+    M8 (net48 net48 Vdd Vdd) ami06P w=43.95u l=3u as=6.5925e-11 \
+        ad=6.5925e-11 ps=90.9u pd=90.9u m=1 region=sat
+    M5 (net52 net48 Vdd Vdd) ami06P w=37.05u l=1.8u as=5.5575e-11 \
+        ad=5.5575e-11 ps=77.1u pd=77.1u m=1 region=sat
+    M1 (net49 Vin\- net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    M2 (net55 Vin\+ net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    I13 (net48 Gnd) isource type=dc dc=40u m=1
+ends opamp_project_1
+// End of subcircuit definition.
+
+// Library name: ESE_6680
+// Cell name: project_2_baseline_design
+// View name: schematic
+N2 (net016 CLK1 Output 0) ami06N w=W13 l=L13 as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+N0 (Vin CLK1 net02 0) ami06N w=W9 l=L9 as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+N1 (net02 CLK2 net019 0) ami06N w=W11 l=L11 as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+C7 (net02 net016) capacitor c=Ch m=1
+C3 (Output 0) capacitor c=1p m=1
+C8 (net016 Output) capacitor c=Cf m=1
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K
+V10 (CLK1 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n delay=0 \
+        rise=200.0p fall=200.0p width=90n
+V11 (CLK2 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n \
+        delay=100n rise=200.0p fall=200.0p width=90n
+V12 (CLK2\' 0) vsource type=pulse dc=2.5 val0=5 val1=0 period=200n \
+        delay=100n rise=200.0p fall=200.0p width=90n
+V13 (CLK1\' 0) vsource type=pulse dc=2.5 val0=5 val1=0 period=200n delay=0 \
+        rise=200.0p fall=200.0p width=90n
+I38 (0 Output VDD net05 net016) opamp_project_1
+V8 (net019 0) vsource type=dc dc=2.5
+V9 (net05 0) vsource type=dc dc=2.5
+V0 (VDD 0) vsource type=dc dc=5
+P2 (net02 CLK2\' net019 VDD) ami06P w=W12 l=L12 as=W12 * 2.5 * (600n) ad=W12 * 2.5 * (600n) \
+         ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) m=1 \
+        region=sat
+P0 (Output CLK1\' net016 VDD) ami06P w=W14 l=L14 as=W14 * 2.5 * (600n) ad=W14 * 2.5 * (600n) \
+         ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) m=1 \
+        region=sat
+P1 (net02 CLK1\' Vin VDD) ami06P w=W10 l=L10 as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=10u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save V0:p 
+saveOptions options save=allpub

@@ -1,0 +1,32 @@
+// Generated for: spectre
+// Generated on: Mar 19 14:17:15 2026
+// Design library name: ESE_6680
+// Design cell name: project_2
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE_6680
+// Cell name: project_2
+// View name: schematic
+N0 (Vin Clk Vout Vout) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+C0 (Vout 0) capacitor c=1p m=1
+V0 (Clk 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n rise=1p \
+        fall=1p width=100n
+V1 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500.0K
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=10u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

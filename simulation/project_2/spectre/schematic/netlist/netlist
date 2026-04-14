@@ -1,0 +1,10 @@
+
+// Library name: ESE_6680
+// Cell name: project_2
+// View name: schematic
+N0 (Vin Clk Vout Vout) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+C0 (Vout 0) capacitor c=1p m=1
+V0 (Clk 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n rise=1p \
+        fall=1p width=100n
+V1 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500.0K

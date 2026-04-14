@@ -1,0 +1,22 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Current_Mirror_OPAMP_Test"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/Current_Mirror_OPAMP_Test/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE_6680/Current_Mirror/schematic" "Current_Mirror" )
+( "ESE_6680/Current_Mirror_OPAMP_Test/schematic" "Current_Mirror_OPAMP_Test" )
+( "ESE_6680/Current_Mirror_OPAMP/schematic" "Current_Mirror_OPAMP" )
+ )
+( "Current_Mirror_OPAMP" "ihnl/cds1/map" )
+( "Current_Mirror" "ihnl/cds0/map" )
+( "Current_Mirror_OPAMP_Test" "ihnl/cds2/map" )
+ )

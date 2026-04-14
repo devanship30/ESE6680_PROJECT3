@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "project_2_flip_around"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/project_2_flip_around/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE_6680/project_2_flip_around/schematic" "project_2_flip_around" )
+( "ESE_6680/project_1_optimized/schematic" "project_1_optimized" )
+ )
+( "project_2_flip_around" "ihnl/cds1/map" )
+( "project_1_optimized" "ihnl/cds0/map" )
+ )

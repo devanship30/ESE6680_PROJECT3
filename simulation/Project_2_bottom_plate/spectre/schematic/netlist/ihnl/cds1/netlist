@@ -1,0 +1,51 @@
+
+// Library name: ESE_6680
+// Cell name: Project_2_bottom_plate
+// View name: schematic
+I6 (0 Output VDD net6 net3) project_1_optimized
+N4 (net5 CLK2 Output 0) ami06N w=W17 l=600n as=W17 * 2.5 * (600n) ad=W17 * 2.5 * (600n) \
+         ps=(2 * W17) + (5 * (600n)) pd=(2 * W17) + (5 * (600n)) m=1 \
+        region=sat
+N3 (Vin CLK1 net4 0) ami06N w=W9 l=600n as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+N2 (net3 CLK1\' net9 0) ami06N w=W11 l=600n as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+N1 (0 CLK1 net5 0) ami06N w=W15 l=600n as=W15 * 2.5 * (600n) ad=W15 * 2.5 * (600n) \
+         ps=(2 * W15) + (5 * (600n)) pd=(2 * W15) + (5 * (600n)) m=1 \
+        region=sat
+N0 (0 CLK2 net4 0) ami06N w=W13 l=600n as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+V2 (VDD 0) vsource type=dc dc=5
+V1 (net9 0) vsource type=dc dc=2.5
+V0 (net6 0) vsource type=dc dc=2.5
+C3 (Output 0) capacitor c=1p m=1
+C2 (net4 net3) capacitor c=Ch m=1
+C1 (net5 net3) capacitor c=Cf m=1
+C0 (net3 0) capacitor c=Cp m=1
+V7 (CLK1\' 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=t/2 \
+        rise=1p fall=1p width=(t/2)-15n
+V5 (CLK2\' 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=0 \
+        rise=1p fall=1p width=(t/2)-15n
+V10 (CLK2 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=0 \
+        rise=1p fall=1p width=(t/2)-10n
+V11 (CLK1 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=t delay=t/2 \
+        rise=1p fall=1p width=(t/2)-10n
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K
+P4 (Output CLK1 net5 VDD) ami06P w=W18 l=600n as=W18 * 2.5 * (600n) ad=W18 * 2.5 * (600n) \
+         ps=(2 * W18) + (5 * (600n)) pd=(2 * W18) + (5 * (600n)) m=1 \
+        region=sat
+P3 (net4 CLK2 Vin VDD) ami06P w=W10 l=600n as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat
+P0 (net5 CLK2 0 VDD) ami06P w=W16 l=600n as=W16 * 2.5 * (600n) ad=W16 * 2.5 * (600n) \
+         ps=(2 * W16) + (5 * (600n)) pd=(2 * W16) + (5 * (600n)) m=1 \
+        region=sat
+P1 (net9 CLK2\' net3 VDD) ami06P w=W12 l=600n as=W12 * 2.5 * (600n) ad=W12 * 2.5 * (600n) \
+         ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) m=1 \
+        region=sat
+P2 (net4 CLK1 0 VDD) ami06P w=W14 l=600n as=W14 * 2.5 * (600n) ad=W14 * 2.5 * (600n) \
+         ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) m=1 \
+        region=sat

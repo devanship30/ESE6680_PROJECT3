@@ -1,0 +1,5 @@
+
+// Library name: ESE_6680
+// Cell name: Current_Mirror_OPAMP
+// View name: schematic
+subckt Current_Mirror_OPAMP Gnd Output Vdd Vin\+ Vin\-

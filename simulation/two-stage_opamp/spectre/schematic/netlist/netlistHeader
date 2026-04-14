@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Feb  8 20:04:53 2026
+// Design library name: ESE_6680
+// Design cell name: two-stage_opamp
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
