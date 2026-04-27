@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Feb 19 17:15:15 2026
+// Design library name: ese6680
+// Design cell name: Test_Opamp_Hw3_SlewRate
+// Design view name: schematic
+simulator lang=spectre
+global 0

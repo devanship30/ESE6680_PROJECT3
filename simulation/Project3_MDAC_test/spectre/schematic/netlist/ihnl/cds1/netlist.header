@@ -1,0 +1,5 @@
+
+// Library name: ese6680
+// Cell name: Project3_MDAC
+// View name: schematic
+subckt Project3_MDAC GND Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout

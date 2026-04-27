@@ -1,0 +1,39 @@
+
+// Library name: ese6680
+// Cell name: Project2_Dynamic
+// View name: schematic
+subckt Project2_Dynamic Clk Gnd Vdd Vin_n Vin_p out_m out_p
+    P4 (out_p out_m net25 Vdd) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P3 (out_m out_p net27 Vdd) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P2 (net25 Vin_p net22 Vdd) ami06P w=1.65u l=600n as=2.475e-12 \
+        ad=2.475e-12 ps=6.3u pd=6.3u m=1 region=sat
+    P1 (net27 Vin_n net22 Vdd) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P5 (net22 Clk Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N5 (net25 Clk Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (out_p Clk Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (out_p out_m Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (out_m out_p Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (out_m Clk Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (net27 Clk Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+ends Project2_Dynamic
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Project2_Test_Dynamic
+// View name: schematic
+I0 (net2 0 net1 net4 net5 out_m out_p) Project2_Dynamic
+V2 (net4 0) vsource type=dc dc=2.5 - vd/2
+V1 (net5 0) vsource type=dc dc=2.5 + vd/2
+V0 (net1 0) vsource type=dc dc=5
+V3 (net2 0) vsource type=pulse val0=0 val1=5 period=2u delay=0 rise=200.0p \
+        fall=200.0p width=1u

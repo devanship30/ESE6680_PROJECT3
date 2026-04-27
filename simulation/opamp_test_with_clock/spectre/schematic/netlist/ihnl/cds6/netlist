@@ -1,0 +1,12 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: opamp_test_with_clock
+// View name: schematic
+I0 (net10 net3 phi1 phi1\' phi2 phi2\') non_overlapping_clock
+I1 (Output net3 Vin net4 phi1 phi1\' phi2 phi2\') \
+        project_2_baseline_design
+V1 (net4 0) vsource type=dc dc=2.5
+V0 (net3 0) vsource type=dc dc=5
+V2 (net10 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=90n
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K

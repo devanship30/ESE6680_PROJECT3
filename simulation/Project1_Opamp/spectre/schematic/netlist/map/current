@@ -1,0 +1,14 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Project1_Opamp"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  hierDelim "."
+  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Project1_Opamp/spectre/schematic/netlist"
+ )
+( model
+( "ese6680/Project1_Opamp/schematic" "Project1_Opamp" )
+ )
+( "Project1_Opamp" "ihnl/cds0/map" )
+ )

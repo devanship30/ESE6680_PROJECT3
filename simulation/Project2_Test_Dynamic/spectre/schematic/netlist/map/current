@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Project2_Test_Dynamic"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Project2_Test_Dynamic/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ese6680/Project2_Test_Dynamic/schematic" "Project2_Test_Dynamic" )
+( "ese6680/Project2_Dynamic/schematic" "Project2_Dynamic" )
+ )
+( "Project2_Test_Dynamic" "ihnl/cds1/map" )
+( "Project2_Dynamic" "ihnl/cds0/map" )
+ )

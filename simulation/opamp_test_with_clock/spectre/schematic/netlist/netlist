@@ -1,0 +1,127 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD
+    N0 (OUT IN 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (OUT IN VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends inv
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD
+    I1 (net5 OUT VDD) inv
+    I0 (IN net5 VDD) inv
+ends buffer
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: nand
+// View name: schematic
+subckt nand A B OUT VDD
+    N1 (net9 B 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N0 (OUT A net9 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P1 (OUT B VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P0 (OUT A VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends nand
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: non_overlapping_clock
+// View name: schematic
+subckt non_overlapping_clock CLK VDD phi1 phi1\' phi2 phi2\'
+    I25 (net028 phi1\' VDD) inv
+    I27 (net051 phi2\' VDD) inv
+    I159 (CLK net039 VDD) inv
+    I29 (phi1 net011 VDD) inv
+    I17 (net010 net013 VDD) inv
+    I28 (phi2 net022 VDD) inv
+    I14 (net039 net049 VDD) inv
+    I155 (net035 net017 VDD) inv
+    I176 (net037 phi1 VDD) buffer
+    I164 (net030 phi2 VDD) buffer
+    I175 (net013 net037 VDD) buffer
+    I163 (net017 net030 VDD) buffer
+    I83 (net022 net022 net051 VDD) nand
+    I82 (net011 net011 net028 VDD) nand
+    I15 (net039 net035 net010 VDD) nand
+    I16 (net049 net010 net035 VDD) nand
+ends non_overlapping_clock
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: opamp_project_1
+// View name: schematic
+subckt opamp_project_1 Gnd Output Vdd Vin\+ Vin\-
+    M6 (Output net55 Gnd Gnd) ami06N w=60u l=1.65u as=9e-11 ad=9e-11 \
+        ps=123.000000u pd=123.000000u m=1 region=sat
+    M3 (net49 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    M4 (net55 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    Rc (net55 net59) resistor r=4.15K m=1
+    Cc (net59 Output) capacitor c=1.1p m=1
+    M7 (Output net48 Vdd Vdd) ami06P w=268.05u l=3u as=4.02075e-10 \
+        ad=4.02075e-10 ps=539.1u pd=539.1u m=1 region=sat
+    M8 (net48 net48 Vdd Vdd) ami06P w=43.95u l=3u as=6.5925e-11 \
+        ad=6.5925e-11 ps=90.9u pd=90.9u m=1 region=sat
+    M5 (net52 net48 Vdd Vdd) ami06P w=37.05u l=1.8u as=5.5575e-11 \
+        ad=5.5575e-11 ps=77.1u pd=77.1u m=1 region=sat
+    M1 (net49 Vin\- net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    M2 (net55 Vin\+ net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    I13 (net48 Gnd) isource type=dc dc=40u m=1
+ends opamp_project_1
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: project_2_baseline_design
+// View name: schematic
+subckt project_2_baseline_design Output VDD Vin half_VDD phi1 phi1\' phi2 \
+        phi2\'
+    N2 (net016 phi1 Output 0) ami06N w=W13 l=L13 as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+    N0 (Vin phi1 net02 0) ami06N w=W9 l=L9 as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+    N1 (net02 phi2 half_VDD 0) ami06N w=W11 l=L11 as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+    C7 (net02 net016) capacitor c=Ch m=1
+    C3 (Output 0) capacitor c=1p m=1
+    C8 (net016 Output) capacitor c=Cf m=1
+    I40 (0 Output VDD net05 net016) opamp_project_1
+    V9 (net05 0) vsource type=dc dc=2.5
+    P2 (net02 phi2\' half_VDD VDD) ami06P w=W12 l=L12 as=W12 * 2.5 * (600n) \
+         ad=W12 * 2.5 * (600n) ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) \
+         m=1 region=sat
+    P0 (Output phi1\' net016 VDD) ami06P w=W14 l=L14 as=W14 * 2.5 * (600n) \
+        ad=W14 * 2.5 * (600n) ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) \
+         m=1 region=sat
+    P1 (net02 phi1\' Vin VDD) ami06P w=W10 l=L10 as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat
+ends project_2_baseline_design
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: opamp_test_with_clock
+// View name: schematic
+I0 (net10 net3 phi1 phi1\' phi2 phi2\') non_overlapping_clock
+I1 (Output net3 Vin net4 phi1 phi1\' phi2 phi2\') \
+        project_2_baseline_design
+V1 (net4 0) vsource type=dc dc=2.5
+V0 (net3 0) vsource type=dc dc=5
+V2 (net10 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=90n
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K

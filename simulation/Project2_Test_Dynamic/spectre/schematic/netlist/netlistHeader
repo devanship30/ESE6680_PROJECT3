@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Mar 30 13:59:01 2026
+// Design library name: ese6680
+// Design cell name: Project2_Test_Dynamic
+// Design view name: schematic
+simulator lang=spectre
+global 0

@@ -1,0 +1,9 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/Vref_gen/schematic Vref_gen
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

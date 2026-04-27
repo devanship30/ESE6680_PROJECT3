@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Mar 25 19:34:53 2026
+// Design library name: ese6680
+// Design cell name: Project2_Test_StaticComparator
+// Design view name: schematic
+simulator lang=spectre
+global 0

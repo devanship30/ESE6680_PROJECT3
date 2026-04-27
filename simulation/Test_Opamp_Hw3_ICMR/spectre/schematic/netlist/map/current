@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Test_Opamp_Hw3_ICMR"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Test_Opamp_Hw3_ICMR/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ese6680/Test_Opamp_Hw3_ICMR/schematic" "Test_Opamp_Hw3_ICMR" )
+( "ese6680/hw3_2stage_opamp/schematic" "hw3_2stage_opamp" )
+ )
+( "hw3_2stage_opamp" "ihnl/cds0/map" )
+( "Test_Opamp_Hw3_ICMR" "ihnl/cds1/map" )
+ )

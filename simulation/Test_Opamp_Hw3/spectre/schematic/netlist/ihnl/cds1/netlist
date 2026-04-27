@@ -1,0 +1,8 @@
+
+// Library name: ese6680
+// Cell name: Test_Opamp_Hw3
+// View name: schematic
+I0 (0 net3 net1 net2 Vout) hw3_2stage_opamp
+V2 (net2 0) vsource type=dc dc=2.5 mag=-500m
+V1 (net3 0) vsource type=dc dc=5
+V0 (net1 0) vsource type=dc dc=2.5 mag=500.0m

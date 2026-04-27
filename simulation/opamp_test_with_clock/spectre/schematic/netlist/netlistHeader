@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Apr 21 14:02:31 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: opamp_test_with_clock
+// Design view name: schematic
+simulator lang=spectre
+global 0

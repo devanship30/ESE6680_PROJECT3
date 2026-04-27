@@ -1,0 +1,30 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Test1"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Test1/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE6680_PROJECT3/Test1/schematic" "Test1" )
+( "ese6680/Project1_Opamp/schematic" "Project1_Opamp" )
+( "ESE6680_PROJECT3/buffer/schematic" "buffer" )
+( "ESE6680_PROJECT3/Final_MDAC/schematic" "Final_MDAC" )
+( "ESE6680_PROJECT3/nand/schematic" "nand" )
+( "ESE6680_PROJECT3/inv/schematic" "inv" )
+( "ESE6680_PROJECT3/non_overlapping_clock/schematic" "non_overlapping_clock" )
+ )
+( "non_overlapping_clock" "ihnl/cds5/map" )
+( "Project1_Opamp" "ihnl/cds0/map" )
+( "buffer" "ihnl/cds3/map" )
+( "Test1" "ihnl/cds6/map" )
+( "nand" "ihnl/cds4/map" )
+( "inv" "ihnl/cds2/map" )
+( "Final_MDAC" "ihnl/cds1/map" )
+ )

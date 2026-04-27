@@ -1,0 +1,8 @@
+
+// Library name: ese6680
+// Cell name: Project1_Test_Phase
+// View name: schematic
+V0 (VDD 0) vsource type=dc dc=5
+V2 (Vin\- 0) vsource type=dc dc=2.5 mag=-500m
+V1 (Vin\+ 0) vsource type=dc dc=2.5 mag=500
+I0 (0 VDD Vin\+ Vin\- Vout) Project1_Opamp

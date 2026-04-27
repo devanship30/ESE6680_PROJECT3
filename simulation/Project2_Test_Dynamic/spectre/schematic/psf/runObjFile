@@ -1,0 +1,151 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Mar 30 14:19:30 2026"
+"date" "Mar 30 14:19:30 2026"
+"simulator" "spectre"
+"netlistDir" "../netlist"
+"tranSST2Data" "TRUE"
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Root" "runObject" (
+("")
+""
+("vd")
+)
+"vd=0.079/psf" "runObject" (
+(
+"../vd=0.079/psf/logFile"
+"../vd=0.079/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.079"
+ "vd" 7.900000e-02
+)
+
+"vd=0.0791111111111111/psf" "runObject" (
+(
+"../vd=0.0791111111111111/psf/logFile"
+"../vd=0.0791111111111111/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0791111111111111"
+ "vd" 7.911111e-02
+)
+
+"vd=0.0792222222222222/psf" "runObject" (
+(
+"../vd=0.0792222222222222/psf/logFile"
+"../vd=0.0792222222222222/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0792222222222222"
+ "vd" 7.922222e-02
+)
+
+"vd=0.0793333333333334/psf" "runObject" (
+(
+"../vd=0.0793333333333334/psf/logFile"
+"../vd=0.0793333333333334/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0793333333333334"
+ "vd" 7.933333e-02
+)
+
+"vd=0.0794444444444445/psf" "runObject" (
+(
+"../vd=0.0794444444444445/psf/logFile"
+"../vd=0.0794444444444445/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0794444444444445"
+ "vd" 7.944444e-02
+)
+
+"vd=0.0795555555555556/psf" "runObject" (
+(
+"../vd=0.0795555555555556/psf/logFile"
+"../vd=0.0795555555555556/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0795555555555556"
+ "vd" 7.955556e-02
+)
+
+"vd=0.0796666666666667/psf" "runObject" (
+(
+"../vd=0.0796666666666667/psf/logFile"
+"../vd=0.0796666666666667/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0796666666666667"
+ "vd" 7.966667e-02
+)
+
+"vd=0.0797777777777778/psf" "runObject" (
+(
+"../vd=0.0797777777777778/psf/logFile"
+"../vd=0.0797777777777778/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0797777777777778"
+ "vd" 7.977778e-02
+)
+
+"vd=0.0798888888888889/psf" "runObject" (
+(
+"../vd=0.0798888888888889/psf/logFile"
+"../vd=0.0798888888888889/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.0798888888888889"
+ "vd" 7.988889e-02
+)
+
+"vd=0.08/psf" "runObject" (
+(
+"../vd=0.08/psf/logFile"
+"../vd=0.08/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../vd=0.08"
+ "vd" 8.000000e-02
+)
+
+END

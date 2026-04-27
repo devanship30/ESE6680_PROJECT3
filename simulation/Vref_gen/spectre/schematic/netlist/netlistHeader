@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Apr 26 23:51:45 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: Vref_gen
+// Design view name: schematic
+simulator lang=spectre
+global 0

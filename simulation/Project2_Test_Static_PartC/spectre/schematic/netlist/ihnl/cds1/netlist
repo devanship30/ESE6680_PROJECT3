@@ -1,0 +1,9 @@
+
+// Library name: ese6680
+// Cell name: Project2_Test_Static_PartC
+// View name: schematic
+V3 (net2 0) vsource type=dc dc=5
+V0 (net1 0) vsource type=dc dc=5
+V2 (net3 0) vsource type=dc dc=2.5 - Vd/2
+V1 (net4 0) vsource type=dc dc=2.5 + Vd/2
+I7 (0 net2 net1 net4 net3 Vo1 Vo2) Project2_StaticComparator

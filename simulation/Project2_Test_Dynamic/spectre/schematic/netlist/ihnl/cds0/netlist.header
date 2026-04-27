@@ -1,0 +1,5 @@
+
+// Library name: ese6680
+// Cell name: Project2_Dynamic
+// View name: schematic
+subckt Project2_Dynamic Clk Gnd Vdd Vin_n Vin_p out_m out_p

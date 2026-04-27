@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: nand
+// View name: schematic
+subckt nand A B OUT VDD

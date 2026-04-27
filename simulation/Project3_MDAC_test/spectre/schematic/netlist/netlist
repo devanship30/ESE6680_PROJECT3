@@ -1,0 +1,80 @@
+
+// Library name: ese6680
+// Cell name: Project1_Opamp
+// View name: schematic
+subckt Project1_Opamp GND VDD Vin\+ Vin\- Vout
+    M4 (net70 net66 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M3 (net66 net66 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M6 (Vout net70 GND GND) ami06N w=58.05u l=900n as=8.7075e-11 \
+        ad=8.7075e-11 ps=119.1u pd=119.1u m=1 region=sat
+    Cc (net80 Vout) capacitor c=1p m=1
+    M7 (Vout net65 VDD VDD) ami06P w=133.95u l=1.2u as=2.00925e-10 \
+        ad=2.00925e-10 ps=270.9u pd=270.9u m=1 region=sat
+    M5 (net09 net65 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M8 (net65 net65 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M2 (net70 Vin\+ net09 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    M1 (net66 Vin\- net09 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    Iref (net65 GND) isource type=dc dc=60u m=1
+    Rc (net70 net80) resistor r=1K m=1
+ends Project1_Opamp
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Project3_MDAC
+// View name: schematic
+subckt Project3_MDAC GND Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout
+    I0 (GND VDD net035 net2 Vout) Project1_Opamp
+    Cs (net1 net2) capacitor c=2p m=1
+    Cf (net2 net3) capacitor c=1p m=1
+    N6 (iPhi2 Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N5 (iPhi1 Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (Vin\+ Phi2 net1 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (net1 Phi1 Vin\- GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (net2 Phi1E net037 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N1 (net027 Phi1 net3 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (Vout Phi2 net3 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    V2 (net027 GND) vsource type=dc dc=2.5
+    V0 (net035 GND) vsource type=dc dc=2.5
+    V1 (net037 GND) vsource type=dc dc=2.5
+    P5 (iPhi2 Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (iPhi1 Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (net1 iPhi1 Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (Vin\+ iPhi2 net1 VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (net027 iPhi1 net3 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P1 (Vout iPhi2 net3 VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+ends Project3_MDAC
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Project3_MDAC_test
+// View name: schematic
+I0 (0 Phi1 Phi1E Phi2 net3 Vin\+ Vin\- Vout) Project3_MDAC
+V5 (Vin\- 0) vsource type=dc dc=2.5
+V0 (net3 0) vsource type=dc dc=5
+V4 (Vin\+ 0) vsource type=pulse val0=2 val1=3 period=1u rise=1n fall=1n \
+        width=500n
+V3 (Phi1E 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
+        fall=1n width=200n
+V2 (Phi2 0) vsource type=pulse val0=0 val1=5 period=500n delay=250n \
+        rise=1n fall=1n width=220n
+V1 (Phi1 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
+        fall=1n width=220n

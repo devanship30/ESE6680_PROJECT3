@@ -1,0 +1,36 @@
+
+// Library name: ese6680
+// Cell name: Project1_Opamp
+// View name: schematic
+subckt Project1_Opamp GND VDD Vin\+ Vin\- Vout
+    M4 (net70 net66 GND GND) ami06N w=8.7u l=900n as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M3 (net66 net66 GND GND) ami06N w=8.7u l=900n as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M6 (Vout net70 GND GND) ami06N w=67.35u l=900n as=1.01025e-10 \
+        ad=1.01025e-10 ps=137.7u pd=137.7u m=1 region=sat
+    Cc (net80 Vout) capacitor c=3p m=1
+    CL (Vout GND) capacitor c=2p m=1
+    M7 (Vout net65 VDD VDD) ami06P w=229.95u l=1.2u as=3.44925e-10 \
+        ad=3.44925e-10 ps=462.9u pd=462.9u m=1 region=sat
+    M5 (net69 net65 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M8 (net65 net65 VDD VDD) ami06P w=w8 l=l8 as=w8 * 2.5 * (600n) ad=w8 * 2.5 * (600n) \
+         ps=(2 * w8) + (5 * (600n)) pd=(2 * w8) + (5 * (600n)) m=1 \
+        region=sat
+    M2 (net70 Vin\+ net69 net69) ami06P w=49.95u l=900n as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    M1 (net66 Vin\- net69 net69) ami06P w=49.95u l=900n as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    Iref (net65 GND) isource type=dc dc=60u m=1
+    Rc (net70 net80) resistor r=1K m=1
+ends Project1_Opamp
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Project1_Test_Phase
+// View name: schematic
+V0 (VDD 0) vsource type=dc dc=5
+V2 (Vin\- 0) vsource type=dc dc=2.5 mag=-500m
+V1 (Vin\+ 0) vsource type=dc dc=2.5 mag=500
+I0 (0 VDD Vin\+ Vin\- Vout) Project1_Opamp

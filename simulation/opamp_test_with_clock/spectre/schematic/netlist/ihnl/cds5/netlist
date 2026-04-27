@@ -1,0 +1,25 @@
+    N2 (net016 phi1 Output 0) ami06N w=W13 l=L13 as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+    N0 (Vin phi1 net02 0) ami06N w=W9 l=L9 as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+    N1 (net02 phi2 half_VDD 0) ami06N w=W11 l=L11 as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+    C7 (net02 net016) capacitor c=Ch m=1
+    C3 (Output 0) capacitor c=1p m=1
+    C8 (net016 Output) capacitor c=Cf m=1
+    I40 (0 Output VDD net05 net016) opamp_project_1
+    V9 (net05 0) vsource type=dc dc=2.5
+    P2 (net02 phi2\' half_VDD VDD) ami06P w=W12 l=L12 as=W12 * 2.5 * (600n) \
+         ad=W12 * 2.5 * (600n) ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) \
+         m=1 region=sat
+    P0 (Output phi1\' net016 VDD) ami06P w=W14 l=L14 as=W14 * 2.5 * (600n) \
+        ad=W14 * 2.5 * (600n) ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) \
+         m=1 region=sat
+    P1 (net02 phi1\' Vin VDD) ami06P w=W10 l=L10 as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat
+ends project_2_baseline_design
+// End of subcircuit definition.

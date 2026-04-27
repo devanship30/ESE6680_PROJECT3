@@ -1,0 +1,15 @@
+
+// Library name: ese6680
+// Cell name: Project3_MDAC_test
+// View name: schematic
+I0 (0 Phi1 Phi1E Phi2 net3 Vin\+ Vin\- Vout) Project3_MDAC
+V5 (Vin\- 0) vsource type=dc dc=2.5
+V0 (net3 0) vsource type=dc dc=5
+V4 (Vin\+ 0) vsource type=pulse val0=2 val1=3 period=1u rise=1n fall=1n \
+        width=500n
+V3 (Phi1E 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
+        fall=1n width=200n
+V2 (Phi2 0) vsource type=pulse val0=0 val1=5 period=500n delay=250n \
+        rise=1n fall=1n width=220n
+V1 (Phi1 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
+        fall=1n width=220n

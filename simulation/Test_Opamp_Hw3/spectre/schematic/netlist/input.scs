@@ -1,0 +1,58 @@
+// Generated for: spectre
+// Generated on: Feb 19 17:41:27 2026
+// Design library name: ese6680
+// Design cell name: Test_Opamp_Hw3
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters vac=1 vdc=2.5
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ese6680
+// Cell name: hw3_2stage_opamp
+// View name: schematic
+subckt hw3_2stage_opamp GND VDD Vin\+ Vin\- Vout
+    M2 (net11 Vin\+ net09 VDD) ami06P w=109.95u l=3u as=1.64925e-10 \
+        ad=1.64925e-10 ps=222.9u pd=222.9u m=1 region=sat
+    M1 (net3 Vin\- net09 VDD) ami06P w=109.95u l=3u as=1.64925e-10 \
+        ad=1.64925e-10 ps=222.9u pd=222.9u m=1 region=sat
+    M7 (Vout net019 VDD VDD) ami06P w=268.05u l=2.4u as=4.02075e-10 \
+        ad=4.02075e-10 ps=539.1u pd=539.1u m=1 region=sat
+    M5 (net09 net019 VDD VDD) ami06P w=36.0u l=1.2u as=5.4e-11 ad=5.4e-11 \
+        ps=75.0u pd=75.0u m=1 region=sat
+    M8 (net019 net019 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M6 (Vout net11 GND GND) ami06N w=55.05u l=1.8u as=8.2575e-11 \
+        ad=8.2575e-11 ps=113.1u pd=113.1u m=1 region=sat
+    M4 (net11 net3 GND GND) ami06N w=17.55u l=3u as=2.6325e-11 \
+        ad=2.6325e-11 ps=38.1u pd=38.1u m=1 region=sat
+    M3 (net3 net3 GND GND) ami06N w=17.55u l=3u as=2.6325e-11 \
+        ad=2.6325e-11 ps=38.1u pd=38.1u m=1 region=sat
+    C1 (net22 Vout) capacitor c=1.35p m=1
+    C0 (Vout GND) capacitor c=2p m=1
+    RC (net11 net22) resistor r=2.8K m=1
+    I0 (net019 GND) isource type=dc dc=60u m=1
+ends hw3_2stage_opamp
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Test_Opamp_Hw3
+// View name: schematic
+I0 (0 net3 net1 net2 Vout) hw3_2stage_opamp
+V2 (net2 0) vsource type=dc dc=2.5 mag=-500m
+V1 (net3 0) vsource type=dc dc=5
+V0 (net1 0) vsource type=dc dc=2.5 mag=500.0m
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+ac ac start=10 stop=100G dec=100 annotate=status 
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

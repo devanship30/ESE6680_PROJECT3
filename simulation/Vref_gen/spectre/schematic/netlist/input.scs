@@ -1,0 +1,44 @@
+// Generated for: spectre
+// Generated on: Apr 26 23:51:45 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: Vref_gen
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Vref_gen
+// View name: schematic
+R3 (\3\.25V 0) resistor r=3.25K
+R2 (VDD \3\.25V) resistor r=1.75K
+R1 (\1\.75V 0) resistor r=1.75K
+R0 (VDD \1\.75V) resistor r=3.25K
+N1 (VREF VC\' \1\.75V 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+N0 (VREF VC \3\.25V 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+P1 (VREF VC\' \3\.25V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+P0 (VREF VC \1\.75V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+V0 (VDD 0) vsource dc=5 type=dc
+V2 (VC\' 0) vsource type=pulse val0=5 val1=0 period=100n rise=10p fall=10p \
+        width=50n
+V1 (VC 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p fall=10p \
+        width=50n
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=400n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save \1\.75V \3\.25V 
+saveOptions options save=allpub

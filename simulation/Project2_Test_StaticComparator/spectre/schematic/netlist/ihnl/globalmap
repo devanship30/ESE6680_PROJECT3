@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+ese6680/Project2_Test_StaticComparator/schematic Project2_Test_StaticComparator
+ese6680/Project2_StaticComparator/schematic Project2_StaticComparator
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

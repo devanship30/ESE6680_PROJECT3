@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD

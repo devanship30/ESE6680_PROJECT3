@@ -1,2 +1,20 @@
-INCLUDE $CDS_INST_DIR/tools/dfII/etc/cds.lib
-DEFINE ESE6680_PROJECT3 /lcars/home/m/maahit1/ESE6680_PROJECT3/ESE6680_PROJECT3
+# File created by Tania Khanna 
+
+### Cadence basic libs
+###
+Define analogLib $CDSDIR/tools/dfII/etc/cdslib/artist/analogLib
+
+### NCSU kits libs
+###
+INCLUDE $DESIGNKITS/ncsu-cdk-1.6.0.beta/cdssetup/cds.lib
+
+
+DEFINE ese6680 ~/cadenceAMI/ese6680
+#Removed by ddDeleteObj: DEFINE ESE6680_PROJECT3 /lcars/home/m/maahit1/ESE6680_PROJECT3/ESE6680_PROJECT3
+DEFINE ESE_6680 /lcars/home/m/maahit1/cadenceAMI/ese6680
+
+
+#Removed by ddDeleteObj: DEFINE project_2_baseline_design ~/cadenceAMI/project_2_baseline_design
+#Removed by ddDeleteObj: DEFINE opamp_project_1 ~/cadenceAMI/opamp_project_1
+#Removed by ddDeleteObj: DEFINE ESE6680_PROJECT3 /lcars/home/m/maahit1/cadenceAMI/ESE6680_PROJECT3
+DEFINE ESE6680_PROJECT3 ~/cadenceAMI/ESE6680_PROJECT3/ESE6680_PROJECT3

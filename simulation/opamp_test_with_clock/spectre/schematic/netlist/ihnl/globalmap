@@ -1,0 +1,29 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/project_2_baseline_design/schematic project_2_baseline_design
+ESE6680_PROJECT3/opamp_test_with_clock/schematic opamp_test_with_clock
+ESE6680_PROJECT3/inv/schematic inv
+ESE6680_PROJECT3/buffer/schematic buffer
+ESE6680_PROJECT3/opamp_project_1/schematic opamp_project_1
+ESE6680_PROJECT3/non_overlapping_clock/schematic non_overlapping_clock
+ESE6680_PROJECT3/nand/schematic nand
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L9 L9
+W13 W13
+L10 L10
+W12 W12
+W14 W14
+L13 L13
+Cf Cf
+W11 W11
+L12 L12
+Ch Ch
+W10 W10
+W9 W9
+L14 L14
+L11 L11
+$endparam

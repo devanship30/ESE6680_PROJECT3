@@ -1,0 +1,156 @@
+// Generated for: spectre
+// Generated on: Apr 21 16:06:30 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: Test1
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ese6680
+// Cell name: Project1_Opamp
+// View name: schematic
+subckt Project1_Opamp GND VDD Vin\+ Vin\- Vout
+    M4 (net70 net66 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M3 (net66 net66 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M6 (Vout net70 GND GND) ami06N w=58.05u l=900n as=8.7075e-11 \
+        ad=8.7075e-11 ps=119.1u pd=119.1u m=1 region=sat
+    Cc (net80 Vout) capacitor c=1p m=1
+    M7 (Vout net65 VDD VDD) ami06P w=133.95u l=1.2u as=2.00925e-10 \
+        ad=2.00925e-10 ps=270.9u pd=270.9u m=1 region=sat
+    M5 (net09 net65 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M8 (net65 net65 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M2 (net70 Vin\+ net09 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    M1 (net66 Vin\- net09 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    Iref (net65 GND) isource type=dc dc=60u m=1
+    Rc (net70 net80) resistor r=1K m=1
+ends Project1_Opamp
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Final_MDAC
+// View name: schematic
+subckt Final_MDAC GND Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout
+    N2 (Vout Phi2 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (net102 Phi1 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N0 (net99 Phi1E net107 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N3 (Vin\+ Phi2 net97 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (net97 Phi1 Vin\- GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (iPhi2 Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N5 (iPhi1 Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (Vout iPhi2 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P2 (net102 iPhi1 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P0 (net97 iPhi1 Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P3 (Vin\+ iPhi2 net97 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P5 (iPhi2 Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (iPhi1 Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    Cf (net99 net100) capacitor c=1p m=1
+    Cs (net97 net99) capacitor c=2p m=1
+    V2 (net102 GND) vsource type=dc dc=2.5
+    V0 (net106 GND) vsource type=dc dc=2.5
+    V1 (net107 GND) vsource type=dc dc=2.5
+    I0 (GND VDD net106 net99 Vout) Project1_Opamp
+ends Final_MDAC
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD
+    N0 (OUT IN 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (OUT IN VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends inv
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD
+    I1 (net5 OUT VDD) inv
+    I0 (IN net5 VDD) inv
+ends buffer
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: nand
+// View name: schematic
+subckt nand A B OUT VDD
+    N1 (net9 B 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N0 (OUT A net9 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P1 (OUT B VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P0 (OUT A VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends nand
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: non_overlapping_clock
+// View name: schematic
+subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD
+    I25 (net028 Phi1 VDD) inv
+    I27 (net051 Phi2 VDD) inv
+    I159 (CLK net039 VDD) inv
+    I29 (Phi1E net011 VDD) inv
+    I17 (net010 net013 VDD) inv
+    I28 (net029 net022 VDD) inv
+    I14 (net039 net049 VDD) inv
+    I155 (net035 net017 VDD) inv
+    I176 (net037 Phi1E VDD) buffer
+    I164 (net030 net029 VDD) buffer
+    I175 (net013 net037 VDD) buffer
+    I163 (net017 net030 VDD) buffer
+    I83 (net022 net022 net051 VDD) nand
+    I82 (net011 net011 net028 VDD) nand
+    I15 (net039 net035 net010 VDD) nand
+    I16 (net049 net010 net035 VDD) nand
+ends non_overlapping_clock
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Test1
+// View name: schematic
+I0 (0 Phi1 Phi1E Phi2 net09 Vin\+ Vin\- Vout) Final_MDAC
+I3 (net013 Phi1 Phi1E Phi2 net09) non_overlapping_clock
+V2 (net09 0) vsource type=dc dc=5
+V1 (Vin\- 0) vsource type=dc dc=2.5
+V3 (net013 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
+        fall=1n width=250n
+V4 (Vin\+ 0) vsource type=sine sinedc=2.5 ampl=1 freq=100K
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=10u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

@@ -1,0 +1,15 @@
+    P3 (Vo2 STROBE Vo1 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P2 (Vo1 STROBE Vo2 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P1 (Vo2 Vo1 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    P0 (Vo1 Vo2 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    N1 (Vo1 Vi2 net15 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    N0 (Vo2 Vi1 net15 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    I0 (net15 Gnd) isource type=dc dc=30u m=1
+ends Project2_StaticComparator
+// End of subcircuit definition.

@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+ese6680/Test_Opamp_Hw3_SlewRate/schematic Test_Opamp_Hw3_SlewRate
+ese6680/hw3_2stage_opamp/schematic hw3_2stage_opamp
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+w w
+Cc Cc
+$endparam

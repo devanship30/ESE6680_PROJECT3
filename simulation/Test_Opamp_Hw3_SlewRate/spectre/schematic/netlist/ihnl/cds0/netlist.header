@@ -1,0 +1,5 @@
+
+// Library name: ese6680
+// Cell name: hw3_2stage_opamp
+// View name: schematic
+subckt hw3_2stage_opamp GND VDD Vin\+ Vin\- Vout

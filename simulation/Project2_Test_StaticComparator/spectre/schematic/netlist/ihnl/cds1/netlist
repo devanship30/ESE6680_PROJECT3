@@ -1,0 +1,10 @@
+
+// Library name: ese6680
+// Cell name: Project2_Test_StaticComparator
+// View name: schematic
+I7 (0 net05 net1 net03 net04 Vo1 Vo2) Project2_StaticComparator
+V2 (net04 0) vsource type=dc dc=2.495
+V1 (net03 0) vsource type=dc dc=2.505
+V0 (net1 0) vsource type=dc dc=5
+V3 (net05 0) vsource type=pulse val0=0 val1=5 period=100n delay=5n \
+        rise=200.0p fall=200.0p width=45n

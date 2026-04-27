@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Project2_Test_Static_PartC"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Project2_Test_Static_PartC/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ese6680/Project2_StaticComparator/schematic" "Project2_StaticComparator" )
+( "ese6680/Project2_Test_Static_PartC/schematic" "Project2_Test_Static_PartC" )
+ )
+( "Project2_Test_Static_PartC" "ihnl/cds1/map" )
+( "Project2_StaticComparator" "ihnl/cds0/map" )
+ )

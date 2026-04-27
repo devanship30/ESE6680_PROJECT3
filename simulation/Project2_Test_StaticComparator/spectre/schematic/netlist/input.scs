@@ -1,0 +1,53 @@
+// Generated for: spectre
+// Generated on: Mar 25 19:34:53 2026
+// Design library name: ese6680
+// Design cell name: Project2_Test_StaticComparator
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ese6680
+// Cell name: Project2_StaticComparator
+// View name: schematic
+subckt Project2_StaticComparator Gnd STROBE Vdd Vi1 Vi2 Vo1 Vo2
+    P3 (Vo2 STROBE Vo1 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P2 (Vo1 STROBE Vo2 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P1 (Vo2 Vo1 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    P0 (Vo1 Vo2 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    N1 (Vo1 Vi2 net15 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    N0 (Vo2 Vi1 net15 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    I0 (net15 Gnd) isource type=dc dc=30u m=1
+ends Project2_StaticComparator
+// End of subcircuit definition.
+
+// Library name: ese6680
+// Cell name: Project2_Test_StaticComparator
+// View name: schematic
+I7 (0 net05 net1 net03 net04 Vo1 Vo2) Project2_StaticComparator
+V2 (net04 0) vsource type=dc dc=2.495
+V1 (net03 0) vsource type=dc dc=2.505
+V0 (net1 0) vsource type=dc dc=5
+V3 (net05 0) vsource type=pulse val0=0 val1=5 period=100n delay=5n \
+        rise=200.0p fall=200.0p width=45n
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=200n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save net05 Vo1 Vo2 
+saveOptions options save=allpub

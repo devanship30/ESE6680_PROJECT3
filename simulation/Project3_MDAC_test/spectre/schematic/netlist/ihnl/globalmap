@@ -1,0 +1,11 @@
+CADENCE IHNL11140
+$model
+ese6680/Project1_Opamp/schematic Project1_Opamp
+ese6680/Project3_MDAC/schematic Project3_MDAC
+ese6680/Project3_MDAC_test/schematic Project3_MDAC_test
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

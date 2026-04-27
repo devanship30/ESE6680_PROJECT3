@@ -1,0 +1,5 @@
+
+// Library name: ese6680
+// Cell name: Project2_StaticComparator
+// View name: schematic
+subckt Project2_StaticComparator Gnd STROBE Vdd Vi1 Vi2 Vo1 Vo2

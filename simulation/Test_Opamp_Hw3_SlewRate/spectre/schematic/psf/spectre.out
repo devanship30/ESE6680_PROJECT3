@@ -1,0 +1,120 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.1.1.426.isr27 64bit -- 30 Jun 2010
+Copyright (C) 1989-2010 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 
+        5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 
+        6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 
+        6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 
+        6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 
+        7,085,700; 7,143,021; 7,493,240.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: maahit1   Host: bhangra.seas.upenn.edu   HostID: 829EE63A   PID: 314653
+Memory  available: 19.4275 GB  physical: 33.4250 GB
+CPU Type: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
+          Processor PhysicalID CoreID Frequency
+              0         0        0     2499.9
+              1         0        1     2500.1
+              2         0        2     2500.0
+              3         0        3     2500.1
+              4         0        4     2500.3
+              5         0        5     2500.0
+              6         0        6     2500.1
+              7         0        7     2500.3
+
+
+Simulating `input.scs' on bhangra.seas.upenn.edu at 5:19:53 PM, Thur Feb 19, 2026 (process id: 314653).
+Command line:
+     \
+        /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/spectre/bin/64bit/spectre  \
+        input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre4_307383_11 -format sst2 -raw ../psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5
+spectre pid = 314653
+
+Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+
+Circuit inventory:
+              nodes 8
+            bsim3v3 8     
+          capacitor 2     
+            isource 1     
+           resistor 1     
+            vsource 2     
+
+Time for parsing: CPU = 104.427 ms, elapsed = 157.193 ms.
+Time accumulated: CPU = 104.427 ms, elapsed = 157.193 ms.
+Peak resident memory used = 55.7 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre4_307383_11, ).
+
+*************************************************
+Transient Analysis `tran': time = (0 s -> 100 us)
+*************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 100 us
+    step = 100 ns
+    maxstep = 1 us
+    ic = all
+    skipdc = no
+    reltol = 100e-06
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 2.53 us     (2.53 %), step = 463.2 ns     (463 m%)
+    tran: time = 7.666 us    (7.67 %), step = 1 us            (1 %)
+    tran: time = 12.68 us    (12.7 %), step = 1 us            (1 %)
+    tran: time = 17.68 us    (17.7 %), step = 1 us            (1 %)
+    tran: time = 22.91 us    (22.9 %), step = 533.9 ns     (534 m%)
+    tran: time = 28.38 us    (28.4 %), step = 1 us            (1 %)
+    tran: time = 32.68 us    (32.7 %), step = 1 us            (1 %)
+    tran: time = 37.68 us    (37.7 %), step = 1 us            (1 %)
+    tran: time = 42.91 us    (42.9 %), step = 534 ns       (534 m%)
+    tran: time = 48.38 us    (48.4 %), step = 1 us            (1 %)
+    tran: time = 52.68 us    (52.7 %), step = 1 us            (1 %)
+    tran: time = 57.68 us    (57.7 %), step = 1 us            (1 %)
+    tran: time = 62.91 us    (62.9 %), step = 534 ns       (534 m%)
+    tran: time = 68.38 us    (68.4 %), step = 1 us            (1 %)
+    tran: time = 72.68 us    (72.7 %), step = 1 us            (1 %)
+    tran: time = 77.68 us    (77.7 %), step = 1 us            (1 %)
+    tran: time = 82.91 us    (82.9 %), step = 534 ns       (534 m%)
+    tran: time = 88.38 us    (88.4 %), step = 1 us            (1 %)
+    tran: time = 92.68 us    (92.7 %), step = 1 us            (1 %)
+    tran: time = 97.68 us    (97.7 %), step = 1 us            (1 %)
+Number of accepted tran steps =             1077
+Initial condition solution time: CPU = 385 us, elapsed = 386 us.
+Intrinsic tran analysis time:    CPU = 34.212 ms, elapsed = 36.5901 ms.
+Total time required for tran analysis `tran': CPU = 36.608 ms, elapsed = 44.019 ms.
+Time accumulated: CPU = 143.609 ms, elapsed = 233.657 ms.
+Peak resident memory used = 59.9 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Aggregate audit (5:25:45 PM, Thur Feb 19, 2026):
+Time used: CPU = 170 ms, elapsed = 352 s (5m  52.0s), util. = 48.4e-03%.
+Time spent in licensing: elapsed = 83.4 ms.
+Peak memory used = 60.3 Mbytes.
+spectre completes with 0 errors, 0 warnings, and 0 notices.

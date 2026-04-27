@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Feb 18 17:50:02 2026
+// Design library name: ese6680
+// Design cell name: Project1_Opamp
+// Design view name: schematic
+simulator lang=spectre
+global 0

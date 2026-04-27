@@ -1,0 +1,21 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Vref_gen
+// View name: schematic
+R3 (\3\.25V 0) resistor r=3.25K
+R2 (VDD \3\.25V) resistor r=1.75K
+R1 (\1\.75V 0) resistor r=1.75K
+R0 (VDD \1\.75V) resistor r=3.25K
+N1 (VREF VC\' \1\.75V 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+N0 (VREF VC \3\.25V 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+P1 (VREF VC\' \3\.25V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+P0 (VREF VC \1\.75V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+V0 (VDD 0) vsource dc=5 type=dc
+V2 (VC\' 0) vsource type=pulse val0=5 val1=0 period=100n rise=10p fall=10p \
+        width=50n
+V1 (VC 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p fall=10p \
+        width=50n
