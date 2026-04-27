@@ -1,0 +1,5 @@
+
+// Library name: ESE_6680
+// Cell name: project_1_optimized
+// View name: schematic
+subckt project_1_optimized Gnd Output Vdd Vin\+ Vin\-

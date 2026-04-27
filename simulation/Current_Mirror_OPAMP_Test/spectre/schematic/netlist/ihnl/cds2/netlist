@@ -1,0 +1,24 @@
+
+// Library name: ESE_6680
+// Cell name: Current_Mirror_OPAMP_Test
+// View name: schematic
+C3 (Output1 0) capacitor c=2p m=1
+C5 (Output3 0) capacitor c=2p m=1
+C2 (Output4 0) capacitor c=2p m=1
+C4 (Output2 0) capacitor c=2p m=1
+V12 (net15 0) vsource type=dc dc=Vdd
+V17 (net22 0) vsource type=dc dc=Vdd
+V11 (net16 0) vsource type=dc dc=2.5 mag=500m
+V10 (net29 0) vsource type=dc dc=2.5 mag=-500m
+V14 (net28 0) vsource type=dc dc=2.5 mag=500m
+V13 (net24 0) vsource type=dc dc=2.5 mag=500m
+V16 (net21 0) vsource type=dc dc=Vdd
+V15 (net14 0) vsource type=dc dc=Vdd
+V8 (net23 0) vsource type=dc dc=Vcm mag=500m
+V7 (net27 0) vsource type=dc dc=Vcm mag=-500m
+V0 (net17 0) vsource type=pulse dc=2.5 mag=500m val0=0 val1=5 period=20u \
+        rise=1p fall=1p width=10u
+I3 (0 Output2 net14 net17 Output2) Current_Mirror_OPAMP
+I2 (0 Output4 net21 net23 net27) Current_Mirror_OPAMP
+I1 (0 Output3 net22 net24 net28) Current_Mirror_OPAMP
+I0 (0 Output1 net15 net16 net29) Current_Mirror_OPAMP

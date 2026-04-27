@@ -1,0 +1,2 @@
+"ESE_6680.Current_Mirror.schematic.termorder" (("GND" "VDD" "out") ("GND" "VDD" "out"))
+"ESE_6680.Current_Mirror_OPAMP.schematic.termorder" (("Gnd" "Output" "Vdd" "Vin+" "Vin-") ("Gnd" "Output" "Vdd" "Vin+" "Vin-"))

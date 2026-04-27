@@ -1,0 +1,4 @@
+parameters W11=1u W12=1u W13=1u W14=1u W15=1u W16=1u W17=1u W18=1u W9=5u \
+    W10=15u Rc=4.15K W7=0.000268 W1_2=115u W6=60u W8=44u Ibias=40u W5=37u \
+    W3_4=16.5u L1_2=3u L3_4=3u L7=3u L8=3u L5=1.75u L6=1.625u t=200n Cc=3p \
+    Ch=1p
