@@ -1,0 +1,27 @@
+CADENCE IHNL11140
+$model
+ESE_6680/project_1_optimized/schematic project_1_optimized
+ESE_6680/project_1_test_optimized/schematic project_1_test_optimized
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L3_4 L3_4
+W5 W5
+W8 W8
+L6 L6
+W7 W7
+L1_2 L1_2
+L5 L5
+W1_2 W1_2
+Ibias Ibias
+L7 L7
+Vdd Vdd
+Rc Rc
+W3_4 W3_4
+L8 L8
+W6 W6
+Cc Cc
+Vcm Vcm
+$endparam

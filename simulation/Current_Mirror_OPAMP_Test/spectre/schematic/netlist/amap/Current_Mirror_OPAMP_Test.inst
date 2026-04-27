@@ -1,0 +1,6 @@
+HEADER
+"PSFversion" "1.00"
+"C3n C5n C2n C4n" "NCSU_Analog_Parts_cap_spectre"
+"V12n V17n V11n V10n V14n V13n V16n V15n V8n V7n" "NCSU_Analog_Parts_vdc_spectre"
+"V0n" "NCSU_Analog_Parts_vpulse_spectre"
+"I3n I2n I1n I0n" "Current_Mirror_OPAMP"

@@ -1,0 +1,38 @@
+
+// Library name: ESE_6680
+// Cell name: project_2_baseline_design
+// View name: schematic
+N2 (net016 CLK1 Output 0) ami06N w=W13 l=L13 as=W13 * 2.5 * (600n) ad=W13 * 2.5 * (600n) \
+         ps=(2 * W13) + (5 * (600n)) pd=(2 * W13) + (5 * (600n)) m=1 \
+        region=sat
+N0 (Vin CLK1 net02 0) ami06N w=W9 l=L9 as=W9 * 2.5 * (600n) ad=W9 * 2.5 * (600n) \
+         ps=(2 * W9) + (5 * (600n)) pd=(2 * W9) + (5 * (600n)) m=1 \
+        region=sat
+N1 (net02 CLK2 net019 0) ami06N w=W11 l=L11 as=W11 * 2.5 * (600n) ad=W11 * 2.5 * (600n) \
+         ps=(2 * W11) + (5 * (600n)) pd=(2 * W11) + (5 * (600n)) m=1 \
+        region=sat
+C7 (net02 net016) capacitor c=Ch m=1
+C3 (Output 0) capacitor c=1p m=1
+C8 (net016 Output) capacitor c=Cf m=1
+V6 (Vin 0) vsource type=sine sinedc=2.5 ampl=1.5 freq=500K
+V10 (CLK1 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n delay=0 \
+        rise=200.0p fall=200.0p width=90n
+V11 (CLK2 0) vsource type=pulse dc=2.5 val0=0 val1=5 period=200n \
+        delay=100n rise=200.0p fall=200.0p width=90n
+V12 (CLK2\' 0) vsource type=pulse dc=2.5 val0=5 val1=0 period=200n \
+        delay=100n rise=200.0p fall=200.0p width=90n
+V13 (CLK1\' 0) vsource type=pulse dc=2.5 val0=5 val1=0 period=200n delay=0 \
+        rise=200.0p fall=200.0p width=90n
+I38 (0 Output VDD net05 net016) opamp_project_1
+V8 (net019 0) vsource type=dc dc=2.5
+V9 (net05 0) vsource type=dc dc=2.5
+V0 (VDD 0) vsource type=dc dc=5
+P2 (net02 CLK2\' net019 VDD) ami06P w=W12 l=L12 as=W12 * 2.5 * (600n) ad=W12 * 2.5 * (600n) \
+         ps=(2 * W12) + (5 * (600n)) pd=(2 * W12) + (5 * (600n)) m=1 \
+        region=sat
+P0 (Output CLK1\' net016 VDD) ami06P w=W14 l=L14 as=W14 * 2.5 * (600n) ad=W14 * 2.5 * (600n) \
+         ps=(2 * W14) + (5 * (600n)) pd=(2 * W14) + (5 * (600n)) m=1 \
+        region=sat
+P1 (net02 CLK1\' Vin VDD) ami06P w=W10 l=L10 as=W10 * 2.5 * (600n) ad=W10 * 2.5 * (600n) \
+         ps=(2 * W10) + (5 * (600n)) pd=(2 * W10) + (5 * (600n)) m=1 \
+        region=sat

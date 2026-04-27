@@ -1,0 +1,8 @@
+HEADER
+"PSFversion" "1.00"
+"V0n V15n V12n" "NCSU_Analog_Parts_vdc_spectre"
+"W6n W5n W3n" "analogLib_switch_spectre"
+"C9n C6n C5n" "NCSU_Analog_Parts_cap_spectre"
+"V2n" "NCSU_Analog_Parts_vsin_spectre"
+"I38n" "opamp_project_1"
+"V10n V11n" "NCSU_Analog_Parts_vpulse_spectre"

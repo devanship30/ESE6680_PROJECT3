@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"M6n M3n M4n" "NCSU_Analog_Parts_nmos4_spectre"
+"Rcn" "NCSU_Analog_Parts_res_spectre"
+"Ccn" "NCSU_Analog_Parts_cap_spectre"
+"M7n M8n M5n M1n M2n" "NCSU_Analog_Parts_pmos4_spectre"
+"I13n" "NCSU_Analog_Parts_idc_spectre"
+"Gndv" ":1v"
+"Outputv" ":2v"
+"Vddv" ":3v"
+"Vin+v" ":4v"
+"Vin-v" ":5v"

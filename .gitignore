@@ -1,0 +1,11 @@
+# Cadence simulation/temp
+psf/
+*.raw
+*.log
+*.cdslck
+*.oaLock
+*.oaCache
+
+# OS
+.DS_Store
+Thumbs.db

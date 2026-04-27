@@ -1,0 +1,7 @@
+    R0 (VDD out) resistor r=74.17K m=1
+    M9 (out out GND GND) ami06N w=7.95u l=7.95u as=1.1925e-11 \
+        ad=1.1925e-11 ps=18.9u pd=18.9u m=1 region=sat
+    M10 (out out GND GND) ami06N w=24.0u l=1.5u as=3.6e-11 ad=3.6e-11 \
+        ps=51.0u pd=51.0u m=1 region=sat
+ends Current_Mirror
+// End of subcircuit definition.

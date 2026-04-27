@@ -1,0 +1,35 @@
+// Generated for: spectre
+// Generated on: Apr  2 09:59:06 2026
+// Design library name: SEMICONDUCTOR_MEMORY
+// Design cell name: ITIR_cell
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/apps/design_kits/ncsu-cdk-1.6.0.beta/models/spectre/nom/ami06N.m"
+include "/apps/design_kits/ncsu-cdk-1.6.0.beta/models/spectre/nom/ami06P.m"
+
+// Library name: SEMICONDUCTOR_MEMORY
+// Cell name: ITIR_cell
+// View name: schematic
+I0 (BL net6) rram_cell Ron=1000 Roff=100000 D=1e-08 uv=1e-14 p=10 x0=0.5
+N0 (net6 WL SL 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u pd=6u \
+        m=1 region=sat
+V0 (WL 0) vsource type=pulse val0=0 val1=1.8 period=100n rise=100p \
+        fall=100p width=50n
+V2 (SL 0) vsource type=dc dc=0
+V1 (BL 0) vsource type=dc dc=1.5
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=10u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
+ahdl_include "/lcars/home/p/patel5/cadenceAMI/SEMICONDUCTOR_MEMORY/rram_cell/veriloga/veriloga.va"

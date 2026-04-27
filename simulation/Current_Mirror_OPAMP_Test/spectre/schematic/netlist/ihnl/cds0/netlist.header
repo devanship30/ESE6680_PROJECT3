@@ -1,0 +1,5 @@
+
+// Library name: ESE_6680
+// Cell name: Current_Mirror
+// View name: schematic
+subckt Current_Mirror GND VDD out

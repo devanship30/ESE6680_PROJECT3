@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Project_2_bottom_plate"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/Project_2_bottom_plate/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE_6680/project_1_optimized/schematic" "project_1_optimized" )
+( "ESE_6680/Project_2_bottom_plate/schematic" "Project_2_bottom_plate" )
+ )
+( "project_1_optimized" "ihnl/cds0/map" )
+( "Project_2_bottom_plate" "ihnl/cds1/map" )
+ )

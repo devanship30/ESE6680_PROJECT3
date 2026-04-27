@@ -1,0 +1,40 @@
+CADENCE IHNL11140
+$model
+ESE_6680/project_2_baseline_design/schematic project_2_baseline_design
+ESE_6680/opamp_project_1/schematic opamp_project_1
+ESE_6680/project_1_optimized/schematic project_1_optimized
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L3_4 L3_4
+L9 L9
+W13 W13
+W5 W5
+L10 L10
+W12 W12
+W8 W8
+L6 L6
+W7 W7
+L5 L5
+L1_2 L1_2
+W1_2 W1_2
+Ibias Ibias
+W14 W14
+L13 L13
+Cf Cf
+W11 W11
+L7 L7
+L12 L12
+Ch Ch
+Rc Rc
+W3_4 W3_4
+L8 L8
+W6 W6
+W9 W9
+W10 W10
+Cc Cc
+L14 L14
+L11 L11
+$endparam
