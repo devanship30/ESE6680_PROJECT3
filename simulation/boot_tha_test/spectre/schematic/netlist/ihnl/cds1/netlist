@@ -1,0 +1,9 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: boot_tha_test
+// View name: schematic
+I0 (CLKS 0 VDD VIN VOUT) BOOT_THA
+V0 (VDD 0) vsource dc=5 type=dc
+V1 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
+V2 (CLKS 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
+        width=100n

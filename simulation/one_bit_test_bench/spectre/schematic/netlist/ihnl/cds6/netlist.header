@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: m_opamp
+// View name: schematic
+subckt m_opamp GND VDD Vin\+ Vin\- Vout

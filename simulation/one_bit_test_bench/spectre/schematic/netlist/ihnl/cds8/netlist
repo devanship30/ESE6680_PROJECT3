@@ -1,0 +1,30 @@
+    N7 (GND CLKS_ VY GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (VY VDD VG GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N5 (CLKS_ CLKS GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (VBOTT CLKS_ GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (VOUT VG VIN GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (VIN VG VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (VBOTT VG VX GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (VX CLKS VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (VOUT CLKS_ VIN VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (VG VX VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (VDD VG VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VX CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (CLKS_ CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    C1 (VOUT GND) capacitor c=1p
+    C0 (VTOP VBOTT) capacitor c=1p
+ends BOOT_THA
+// End of subcircuit definition.

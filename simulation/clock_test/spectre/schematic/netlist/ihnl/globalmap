@@ -1,0 +1,13 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/inv/schematic inv
+ESE6680_PROJECT3/buffer/schematic buffer
+ESE6680_PROJECT3/clock_test/schematic clock_test
+ESE6680_PROJECT3/non_overlapping_clock/schematic non_overlapping_clock
+ESE6680_PROJECT3/nand/schematic nand
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

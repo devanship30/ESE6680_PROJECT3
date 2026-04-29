@@ -1,0 +1,44 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: BOOT_THA
+// View name: schematic
+subckt BOOT_THA CLKS GND VDD VIN VOUT
+    N7 (GND CLKS_ VY GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (VY VDD VG GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N5 (CLKS_ CLKS GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (VBOTT CLKS_ GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (VOUT VG VIN GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (VIN VG VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (VBOTT VG VX GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (VX CLKS VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (VOUT CLKS_ VIN VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (VG VX VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (VDD VG VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VX CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (CLKS_ CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    C1 (VOUT GND) capacitor c=1p
+    C0 (VTOP VBOTT) capacitor c=1p
+ends BOOT_THA
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: boot_tha_test
+// View name: schematic
+I0 (CLKS 0 VDD VIN VOUT) BOOT_THA
+V0 (VDD 0) vsource dc=5 type=dc
+V1 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
+V2 (CLKS 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
+        width=100n

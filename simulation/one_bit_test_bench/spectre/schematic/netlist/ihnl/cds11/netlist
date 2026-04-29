@@ -1,0 +1,9 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: one_bit_test_bench
+// View name: schematic
+I0 (BIT CLKIN 0 VDD VIN VOUT) one_bit_stage
+V0 (VDD 0) vsource dc=5 type=dc
+V2 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
+V3 (CLKIN 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p \
+        fall=10p width=50n

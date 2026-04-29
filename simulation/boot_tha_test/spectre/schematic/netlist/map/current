@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "boot_tha_test"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/boot_tha_test/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE6680_PROJECT3/BOOT_THA/schematic" "BOOT_THA" )
+( "ESE6680_PROJECT3/boot_tha_test/schematic" "boot_tha_test" )
+ )
+( "BOOT_THA" "ihnl/cds0/map" )
+( "boot_tha_test" "ihnl/cds1/map" )
+ )

@@ -1,0 +1,88 @@
+// Generated for: spectre
+// Generated on: Apr 29 10:28:03 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: clock_test
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE6680_PROJECT3
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD
+    N0 (OUT IN 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (OUT IN VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends inv
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD
+    I1 (net5 OUT VDD) inv
+    I0 (IN net5 VDD) inv
+ends buffer
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: nand
+// View name: schematic
+subckt nand A B OUT VDD
+    N1 (net9 B 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N0 (OUT A net9 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P1 (OUT B VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P0 (OUT A VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends nand
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: non_overlapping_clock
+// View name: schematic
+subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD
+    I25 (net028 Phi1 VDD) inv
+    I27 (net051 Phi2 VDD) inv
+    I159 (CLK net039 VDD) inv
+    I29 (Phi1E net011 VDD) inv
+    I17 (net010 net013 VDD) inv
+    I28 (net029 net022 VDD) inv
+    I14 (net039 net049 VDD) inv
+    I155 (net035 net017 VDD) inv
+    I176 (net037 Phi1E VDD) buffer
+    I164 (net030 net029 VDD) buffer
+    I175 (net013 net037 VDD) buffer
+    I163 (net017 net030 VDD) buffer
+    I83 (net022 net022 net051 VDD) nand
+    I82 (net011 net011 net028 VDD) nand
+    I15 (net039 net035 net010 VDD) nand
+    I16 (net049 net010 net035 VDD) nand
+ends non_overlapping_clock
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: clock_test
+// View name: schematic
+I0 (CLK Phi1 Phi1E Phi2 VDD) non_overlapping_clock
+V0 (VDD 0) vsource type=dc dc=5
+V1 (CLK 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
+        width=90n
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=5u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

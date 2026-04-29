@@ -1,0 +1,22 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "mdac_test"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/mdac_test/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE6680_PROJECT3/mdac_test/schematic" "mdac_test" )
+( "ESE6680_PROJECT3/m_opamp/schematic" "m_opamp" )
+( "ESE6680_PROJECT3/Final_MDAC/schematic" "Final_MDAC" )
+ )
+( "m_opamp" "ihnl/cds0/map" )
+( "Final_MDAC" "ihnl/cds1/map" )
+( "mdac_test" "ihnl/cds2/map" )
+ )

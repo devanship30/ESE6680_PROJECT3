@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: DFF
+// View name: schematic
+subckt DFF CLK D GND Q VDD

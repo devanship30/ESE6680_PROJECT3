@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: non_overlapping_clock
+// View name: schematic
+subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD

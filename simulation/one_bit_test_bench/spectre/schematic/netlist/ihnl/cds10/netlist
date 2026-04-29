@@ -1,0 +1,10 @@
+    I0 (CLKIN PHI1 PHI1E PHI2 VDD) non_overlapping_clock
+    I1 (GND PHI2 VDD BOOT_VOUT DC Vo1 Vo2) Final_StaticComparator
+    I2 (GND Vo1 VC\' VDD VREF) Vref_gen
+    I3 (GND PHI1 PHI1E PHI2 VDD BOOT_VOUT VREF VOUT) Final_MDAC
+    I4 (PHI1 GND VDD VIN BOOT_VOUT) BOOT_THA
+    V0 (DC GND) vsource dc=2.5 type=dc
+    I19 (PHI2 Vo2 GND VC\' VDD) DFF
+    I16 (CLKIN Vo1 GND BIT VDD) DFF
+ends one_bit_stage
+// End of subcircuit definition.

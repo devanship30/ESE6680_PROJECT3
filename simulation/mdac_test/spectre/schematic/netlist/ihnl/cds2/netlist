@@ -1,0 +1,15 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: mdac_test
+// View name: schematic
+I0 (0 Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout) Final_MDAC
+V2 (Vin\- 0) vsource dc=2.5 type=dc
+V0 (VDD 0) vsource dc=5 type=dc
+V5 (Phi2 0) vsource type=pulse val0=0 val1=5 period=200n delay=110n \
+        rise=10p fall=10p width=80n
+V4 (Phi1E 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=80n
+V3 (Phi1 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
+        width=90n
+V6 (Vin\+ 0) vsource type=pulse val0=2 val1=3 period=1u rise=1n fall=1n \
+        width=500n

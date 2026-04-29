@@ -1,0 +1,8 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: clock_test
+// View name: schematic
+I0 (CLK Phi1 Phi1E Phi2 VDD) non_overlapping_clock
+V0 (VDD 0) vsource type=dc dc=5
+V1 (CLK 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
+        width=90n

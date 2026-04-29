@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Vref_gen
+// View name: schematic
+subckt Vref_gen GND VC VC\' VDD VREF

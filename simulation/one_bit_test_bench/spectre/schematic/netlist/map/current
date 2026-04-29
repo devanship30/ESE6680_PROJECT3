@@ -1,0 +1,38 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "one_bit_test_bench"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/one_bit_test_bench/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE6680_PROJECT3/one_bit_stage/schematic" "one_bit_stage" )
+( "ESE6680_PROJECT3/one_bit_test_bench/schematic" "one_bit_test_bench" )
+( "ESE6680_PROJECT3/BOOT_THA/schematic" "BOOT_THA" )
+( "ESE6680_PROJECT3/Final_StaticComparator/schematic" "Final_StaticComparator" )
+( "ESE6680_PROJECT3/DFF/schematic" "DFF" )
+( "ESE6680_PROJECT3/m_opamp/schematic" "m_opamp" )
+( "ESE6680_PROJECT3/Final_MDAC/schematic" "Final_MDAC" )
+( "ESE6680_PROJECT3/nand/schematic" "nand" )
+( "ESE6680_PROJECT3/inv/schematic" "inv" )
+( "ESE6680_PROJECT3/non_overlapping_clock/schematic" "non_overlapping_clock" )
+( "ESE6680_PROJECT3/Vref_gen/schematic" "Vref_gen" )
+ )
+( "Final_StaticComparator" "ihnl/cds4/map" )
+( "non_overlapping_clock" "ihnl/cds3/map" )
+( "BOOT_THA" "ihnl/cds8/map" )
+( "one_bit_test_bench" "ihnl/cds11/map" )
+( "DFF" "ihnl/cds13/map" )
+( "Vref_gen" "ihnl/cds5/map" )
+( "nand" "ihnl/cds2/map" )
+( "m_opamp" "ihnl/cds6/map" )
+( "one_bit_stage" "ihnl/cds10/map" )
+( "inv" "ihnl/cds0/map" )
+( "Final_MDAC" "ihnl/cds7/map" )
+ )

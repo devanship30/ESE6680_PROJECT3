@@ -1,0 +1,6 @@
+HEADER
+"PSFversion" "1.00"
+"I0n" "one_bit_stage"
+"V0n" "analogLib_vdc_spectre"
+"V2n" "analogLib_vsin_spectre"
+"V3n" "analogLib_vpulse_spectre"

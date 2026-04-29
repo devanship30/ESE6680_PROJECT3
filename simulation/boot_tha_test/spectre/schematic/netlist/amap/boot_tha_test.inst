@@ -1,0 +1,6 @@
+HEADER
+"PSFversion" "1.00"
+"I0n" "BOOT_THA"
+"V0n" "analogLib_vdc_spectre"
+"V1n" "analogLib_vsin_spectre"
+"V2n" "analogLib_vpulse_spectre"

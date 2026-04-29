@@ -1,0 +1,52 @@
+// Generated for: spectre
+// Generated on: Apr 28 16:09:17 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: comparator_test
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Final_StaticComparator
+// View name: schematic
+subckt Final_StaticComparator Gnd STROBE Vdd Vi1 Vi2 Vo1 Vo2
+    I0 (net58 Gnd) isource type=dc dc=30u m=1
+    N1 (Vo1 Vi2 net58 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    N0 (Vo2 Vi1 net58 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    P1 (Vo2 Vo1 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    P0 (Vo1 Vo2 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    P2 (Vo1 STROBE Vo2 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P3 (Vo2 STROBE Vo1 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends Final_StaticComparator
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: comparator_test
+// View name: schematic
+I0 (0 STROBE net3 Vi1 Vi2 Vo1 Vo2) Final_StaticComparator
+V2 (Vi2 0) vsource dc=2.5 type=dc
+V0 (net3 0) vsource dc=5 type=dc
+V1 (Vi1 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
+V3 (STROBE 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=100n
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=5u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

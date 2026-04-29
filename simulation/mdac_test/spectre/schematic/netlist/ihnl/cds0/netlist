@@ -1,0 +1,21 @@
+    M4 (net77 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M3 (net74 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M6 (Vout net77 GND GND) ami06N w=58.05u l=900n as=8.7075e-11 \
+        ad=8.7075e-11 ps=119.1u pd=119.1u m=1 region=sat
+    M7 (Vout net73 VDD VDD) ami06P w=133.95u l=1.2u as=2.00925e-10 \
+        ad=2.00925e-10 ps=270.9u pd=270.9u m=1 region=sat
+    M5 (net81 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M8 (net73 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M2 (net77 Vin\+ net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    M1 (net74 Vin\- net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    Iref (net73 GND) isource type=dc dc=60u m=1
+    Cc (net84 Vout) capacitor c=1p m=1
+    Rc (net77 net84) resistor r=1K m=1
+ends m_opamp
+// End of subcircuit definition.

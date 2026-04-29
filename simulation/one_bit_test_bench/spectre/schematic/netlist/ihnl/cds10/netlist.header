@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: one_bit_stage
+// View name: schematic
+subckt one_bit_stage BIT CLKIN GND VDD VIN VOUT

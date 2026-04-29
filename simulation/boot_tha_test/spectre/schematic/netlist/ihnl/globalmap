@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/boot_tha_test/schematic boot_tha_test
+ESE6680_PROJECT3/BOOT_THA/schematic BOOT_THA
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

@@ -1,0 +1,2 @@
+"ESE6680_PROJECT3.Final_MDAC.schematic.termorder" (("GND" "Phi1" "Phi1E" "Phi2" "VDD" "Vin+" "Vin-" "Vout") ("GND" "Phi1" "Phi1E" "Phi2" "VDD" "Vin+" "Vin-" "Vout"))
+"ESE6680_PROJECT3.m_opamp.schematic.termorder" (("GND" "VDD" "Vin+" "Vin-" "Vout") ("GND" "VDD" "Vin+" "Vin-" "Vout"))
