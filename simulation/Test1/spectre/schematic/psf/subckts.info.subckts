@@ -2,7 +2,7 @@ HEADER
 "PSFversion" "1.00"
 "simulator" "spectre"
 "version" "7.1.1.426.isr27"
-"date" "4:06:33 PM, Tue Apr 21, 2026"
+"date" "3:24:05 PM, Wed Apr 29, 2026"
 "design" "// Generated for: spectre"
 "analysis type" "info.subckts"
 "analysis name" "subckts"
@@ -17,6 +17,10 @@ TYPE
 "key" "sub"
 )
 VALUE
+"m_opamp" "subckt" (
+""
+"GND VDD Vin+ Vin- Vout"
+)
 "inv" "subckt" (
 ""
 "IN OUT VDD 0"
@@ -32,13 +36,5 @@ VALUE
 "non_overlapping_clock" "subckt" (
 ""
 "CLK Phi1 Phi1E Phi2 VDD 0"
-)
-"Project1_Opamp" "subckt" (
-""
-"GND VDD Vin+ Vin- Vout"
-)
-"buffer" "subckt" (
-""
-"IN OUT VDD 0"
 )
 END

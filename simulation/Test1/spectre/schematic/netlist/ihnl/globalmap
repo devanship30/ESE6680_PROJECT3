@@ -6,6 +6,7 @@ ESE6680_PROJECT3/inv/schematic inv
 ESE6680_PROJECT3/Final_MDAC/schematic Final_MDAC
 ESE6680_PROJECT3/buffer/schematic buffer
 ESE6680_PROJECT3/non_overlapping_clock/schematic non_overlapping_clock
+ESE6680_PROJECT3/m_opamp/schematic m_opamp
 ESE6680_PROJECT3/nand/schematic nand
 $endmodel
 $net

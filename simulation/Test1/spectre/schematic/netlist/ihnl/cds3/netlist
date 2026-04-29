@@ -1,4 +1,0 @@
-    I1 (net5 OUT VDD) inv
-    I0 (IN net5 VDD) inv
-ends buffer
-// End of subcircuit definition.

@@ -1,5 +1,5 @@
 si: simSetDef().... simHost is initialized to "localhost" .
-si: simSetDef().... simLoginName is initialized to "maahit1" .
+si: simSetDef().... simLoginName is initialized to "patel5" .
 si: simSetDef().... simHostDiffers is initialized to "nil".
 si: simSetDef().... simInteractiveSimulatorList is initialized to ("verilog") .
 si: simSetDef().... simPostAnalysisProcessingFunc is initialized to "nil".
@@ -390,13 +390,39 @@ hnlPrintTopCellHeader hnlPrintTopCellFooter hnlPrintPorts hnlPrintDeviceHeader
 hnlPrintDeviceFooter hnlPrintInst) .
 Loading the file
 '/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools.lnx86/dfII/etc/skill/hnl/spectre.ile'.Loading the file
-'/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Apr 21 15:56:02 2026
-End netlisting Apr 21 15:56:03 2026
-Begin Incremental Netlisting Apr 21 15:58:05 2026
-End netlisting Apr 21 15:58:05 2026
-Begin Incremental Netlisting Apr 21 15:58:24 2026
-End netlisting Apr 21 15:58:24 2026
-Begin Incremental Netlisting Apr 21 16:00:08 2026
-End netlisting Apr 21 16:00:09 2026
-Begin Incremental Netlisting Apr 21 16:06:30 2026
-End netlisting Apr 21 16:06:30 2026
+'/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Apr 29 14:53:52 2026
+End netlisting Apr 29 14:53:52 2026
+Begin Incremental Netlisting Apr 29 14:56:30 2026
+End netlisting Apr 29 14:56:30 2026
+Begin Incremental Netlisting Apr 29 14:57:35 2026
+End netlisting Apr 29 14:57:35 2026
+Begin Incremental Netlisting Apr 29 15:00:28 2026
+End netlisting Apr 29 15:00:28 2026
+Begin Incremental Netlisting Apr 29 15:02:24 2026
+WARNING (OSSHNL-160): The primitive, 'analogLib/res/spectre', was not used in
+the last netlisting session in this
+current run directory. Therefore,
+re-netlisting all cell views where this
+primitive is instantiated.
+
+WARNING (OSSHNL-160): The primitive, 'analogLib/cap/spectre', was not used in
+the last netlisting session in this
+current run directory. Therefore,
+re-netlisting all cell views where this
+primitive is instantiated.
+
+End netlisting Apr 29 15:02:24 2026
+Begin Incremental Netlisting Apr 29 15:03:27 2026
+End netlisting Apr 29 15:03:27 2026
+Begin Incremental Netlisting Apr 29 15:05:06 2026
+End netlisting Apr 29 15:05:07 2026
+Begin Incremental Netlisting Apr 29 15:09:01 2026
+End netlisting Apr 29 15:09:01 2026
+Begin Incremental Netlisting Apr 29 15:19:25 2026
+End netlisting Apr 29 15:19:25 2026
+Begin Incremental Netlisting Apr 29 15:20:08 2026
+End netlisting Apr 29 15:20:08 2026
+Begin Incremental Netlisting Apr 29 15:21:05 2026
+End netlisting Apr 29 15:21:05 2026
+Begin Incremental Netlisting Apr 29 15:24:02 2026
+End netlisting Apr 29 15:24:02 2026

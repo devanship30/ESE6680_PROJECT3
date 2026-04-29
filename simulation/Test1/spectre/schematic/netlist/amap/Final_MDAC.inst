@@ -4,7 +4,7 @@ HEADER
 "P1n P2n P0n P3n P5n P4n" "NCSU_Analog_Parts_pmos4_spectre"
 "Cfn Csn" "NCSU_Analog_Parts_cap_spectre"
 "V2n V0n V1n" "NCSU_Analog_Parts_vdc_spectre"
-"I0n" "Project1_Opamp"
+"I0n" "m_opamp"
 "GNDv" ":1v"
 "Phi1v" ":2v"
 "Phi1Ev" ":3v"

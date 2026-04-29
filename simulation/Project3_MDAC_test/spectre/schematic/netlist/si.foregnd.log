@@ -1,2 +1,18 @@
-Begin Incremental Netlisting Apr 21 16:10:31 2026
-End netlisting Apr 21 16:10:31 2026
+Begin Incremental Netlisting Apr 28 17:08:22 2026
+WARNING (OSSHNL-176): Property bag for the cell 'Project1_Opamp' in library
+'ese6680', has been modified or added
+since the last netlisting session.
+Therefore, re-netlisting this cell view and
+all cell views where this cell is
+instantiated.
+
+WARNING (OSSHNL-176): Property bag for the cell 'Project3_MDAC' in library
+'ese6680', has been modified or added
+since the last netlisting session.
+Therefore, re-netlisting this cell view and
+all cell views where this cell is
+instantiated.
+
+End netlisting Apr 28 17:08:23 2026
+Begin Incremental Netlisting Apr 28 17:08:53 2026
+End netlisting Apr 28 17:08:53 2026

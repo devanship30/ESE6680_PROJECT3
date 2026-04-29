@@ -29,6 +29,6 @@
     V2 (net102 GND) vsource type=dc dc=2.5
     V0 (net106 GND) vsource type=dc dc=2.5
     V1 (net107 GND) vsource type=dc dc=2.5
-    I0 (GND VDD net106 net99 Vout) Project1_Opamp
+    I0 (GND VDD net106 net99 Vout) m_opamp
 ends Final_MDAC
 // End of subcircuit definition.

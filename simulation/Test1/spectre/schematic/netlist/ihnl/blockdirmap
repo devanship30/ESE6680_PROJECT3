@@ -1,9 +1,8 @@
-CADENCE IHNL11147
+CADENCE IHNL11148
 
-ese6680 Project1_Opamp schematic cds0
 ESE6680_PROJECT3 Final_MDAC schematic cds1
 ESE6680_PROJECT3 inv schematic cds2
-ESE6680_PROJECT3 buffer schematic cds3
 ESE6680_PROJECT3 nand schematic cds4
 ESE6680_PROJECT3 non_overlapping_clock schematic cds5
 ESE6680_PROJECT3 Test1 schematic cds6
+ESE6680_PROJECT3 m_opamp schematic cds7

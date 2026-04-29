@@ -6,6 +6,6 @@ I0 (0 Phi1 Phi1E Phi2 net09 Vin\+ Vin\- Vout) Final_MDAC
 I3 (net013 Phi1 Phi1E Phi2 net09) non_overlapping_clock
 V2 (net09 0) vsource type=dc dc=5
 V1 (Vin\- 0) vsource type=dc dc=2.5
-V3 (net013 0) vsource type=pulse val0=0 val1=5 period=500n delay=0 rise=1n \
-        fall=1n width=250n
+V3 (net013 0) vsource type=pulse val0=0 val1=5 period=100n delay=0 \
+        rise=10p fall=10p width=50n
 V4 (Vin\+ 0) vsource type=sine sinedc=2.5 ampl=1 freq=100K

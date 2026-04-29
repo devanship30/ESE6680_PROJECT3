@@ -6,7 +6,7 @@
   stopList "spectre"
   globalList "gnd!"
   hierDelim "."
-  netlistDir "/lcars/home/m/maahit1/cadenceAMI/simulation/Project3_MDAC_test/spectre/schematic/netlist"
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/Project3_MDAC_test/spectre/schematic/netlist"
  )
 ( net
 ( "gnd!" "0" )

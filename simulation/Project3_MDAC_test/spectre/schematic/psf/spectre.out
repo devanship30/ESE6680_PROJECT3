@@ -12,28 +12,28 @@ Protected by U.S. Patents:
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: maahit1   Host: macarena.seas.upenn.edu   HostID: 829EDE3A   PID: 142353
-Memory  available: 24.0730 GB  physical: 33.4249 GB
-CPU Type: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
+User: patel5   Host: big10.seas.upenn.edu   HostID: 829E7318   PID: 2989213
+Memory  available: 1.5735 GB  physical: 16.6905 GB
+CPU Type: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
           Processor PhysicalID CoreID Frequency
               0         0        0     3700.1
-              1         0        1     3700.0
-              2         0        2     3700.1
-              3         0        3     3700.0
-              4         0        4     3700.0
-              5         0        5     3700.0
-              6         0        6     3700.1
-              7         0        7     3700.2
+              1         0        1     3612.0
+              2         0        2     3434.4
+              3         0        3     3300.1
+              4         0        0     3700.1
+              5         0        1     3300.4
+              6         0        2     3701.0
+              7         0        3     3701.5
 
 
-Simulating `input.scs' on macarena.seas.upenn.edu at 4:10:32 PM, Tue Apr 21, 2026 (process id: 142353).
+Simulating `input.scs' on big10.seas.upenn.edu at 5:08:55 PM, Tue Apr 28, 2026 (process id: 2989213).
 Command line:
      \
         /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/spectre/bin/64bit/spectre  \
         input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
-        +mpssession=spectre1_136900_6 -format sst2 -raw ../psf  \
+        +mpssession=spectre7_2984321_13 -format sst2 -raw ../psf  \
         +lqtimeout 900 -maxw 5 -maxn 5
-spectre pid = 142353
+spectre pid = 2989213
 
 Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /lcars/software/linux/x86_64/ic-design/cadence/MMSIM71/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
@@ -48,15 +48,15 @@ Circuit inventory:
            resistor 1     
             vsource 9     
 
-Time for parsing: CPU = 78.433 ms, elapsed = 137.342 ms.
-Time accumulated: CPU = 78.433 ms, elapsed = 137.342 ms.
+Time for parsing: CPU = 74.469 ms, elapsed = 120.241 ms.
+Time accumulated: CPU = 74.469 ms, elapsed = 120.241 ms.
 Peak resident memory used = 83 Mbytes.
 
-Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre1_136900_6, ).
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre7_2984321_13, ).
 
-************************************************
-Transient Analysis `tran': time = (0 s -> 10 us)
-************************************************
+***********************************************
+Transient Analysis `tran': time = (0 s -> 5 us)
+***********************************************
 
 Notice from spectre during IC analysis, during transient analysis `tran'.
     Gmin = 1 pS is large enough to noticeably affect the DC solution.
@@ -66,9 +66,9 @@ Notice from spectre during IC analysis, during transient analysis `tran'.
 Important parameter values:
     start = 0 s
     outputstart = 0 s
-    stop = 10 us
-    step = 10 ns
-    maxstep = 200 ns
+    stop = 5 us
+    step = 5 ns
+    maxstep = 100 ns
     ic = all
     skipdc = no
     reltol = 1e-03
@@ -84,31 +84,31 @@ Important parameter values:
     cmin = 0 F
     gmin = 1 pS
 
-    tran: time = 250 ns       (2.5 %), step = 9.609 ns    (96.1 m%)
-    tran: time = 750 ns       (7.5 %), step = 11.76 ns     (118 m%)
-    tran: time = 1.25 us     (12.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 1.75 us     (17.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 2.25 us     (22.5 %), step = 10.79 ns     (108 m%)
-    tran: time = 2.75 us     (27.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 3.25 us     (32.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 3.75 us     (37.5 %), step = 11.8 ns      (118 m%)
-    tran: time = 4.25 us     (42.5 %), step = 10.79 ns     (108 m%)
-    tran: time = 4.75 us     (47.5 %), step = 11.8 ns      (118 m%)
-    tran: time = 5.25 us     (52.5 %), step = 10.79 ns     (108 m%)
-    tran: time = 5.75 us     (57.5 %), step = 11.8 ns      (118 m%)
-    tran: time = 6.25 us     (62.5 %), step = 10.79 ns     (108 m%)
-    tran: time = 6.75 us     (67.5 %), step = 11.8 ns      (118 m%)
-    tran: time = 7.25 us     (72.5 %), step = 10.79 ns     (108 m%)
-    tran: time = 7.75 us     (77.5 %), step = 11.8 ns      (118 m%)
-    tran: time = 8.25 us     (82.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 8.75 us     (87.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 9.25 us     (92.5 %), step = 250 ps       (2.5 m%)
-    tran: time = 9.75 us     (97.5 %), step = 250 ps       (2.5 m%)
-Number of accepted tran steps =             3199
-Initial condition solution time: CPU = 1.02 ms, elapsed = 1.0221 ms.
-Intrinsic tran analysis time:    CPU = 231.344 ms, elapsed = 233.998 ms.
-Total time required for tran analysis `tran': CPU = 234.163 ms, elapsed = 242.873 ms.
-Time accumulated: CPU = 319.303 ms, elapsed = 411.237 ms.
+    tran: time = 145 ns       (2.9 %), step = 46.96 ns     (939 m%)
+    tran: time = 390.9 ns    (7.82 %), step = 18.16 ns     (363 m%)
+    tran: time = 649.3 ns      (13 %), step = 37.51 ns     (750 m%)
+    tran: time = 885.9 ns    (17.7 %), step = 20.98 ns     (420 m%)
+    tran: time = 1.151 us      (23 %), step = 41.08 ns     (822 m%)
+    tran: time = 1.375 us    (27.5 %), step = 22.31 ns     (446 m%)
+    tran: time = 1.649 us      (33 %), step = 37.52 ns     (750 m%)
+    tran: time = 1.886 us    (37.7 %), step = 21 ns        (420 m%)
+    tran: time = 2.151 us      (43 %), step = 41.08 ns     (822 m%)
+    tran: time = 2.375 us    (47.5 %), step = 22.31 ns     (446 m%)
+    tran: time = 2.649 us      (53 %), step = 37.52 ns     (750 m%)
+    tran: time = 2.886 us    (57.7 %), step = 21 ns        (420 m%)
+    tran: time = 3.151 us      (63 %), step = 41.08 ns     (822 m%)
+    tran: time = 3.375 us    (67.5 %), step = 22.31 ns     (446 m%)
+    tran: time = 3.649 us      (73 %), step = 37.52 ns     (750 m%)
+    tran: time = 3.886 us    (77.7 %), step = 21 ns        (420 m%)
+    tran: time = 4.151 us      (83 %), step = 41.08 ns     (822 m%)
+    tran: time = 4.375 us    (87.5 %), step = 22.31 ns     (446 m%)
+    tran: time = 4.649 us      (93 %), step = 37.52 ns     (750 m%)
+    tran: time = 4.886 us    (97.7 %), step = 21 ns        (420 m%)
+Number of accepted tran steps =             1616
+Initial condition solution time: CPU = 3.19 ms, elapsed = 3.196 ms.
+Intrinsic tran analysis time:    CPU = 148.945 ms, elapsed = 152.846 ms.
+Total time required for tran analysis `tran': CPU = 157.892 ms, elapsed = 169.357 ms.
+Time accumulated: CPU = 237.553 ms, elapsed = 528.113 ms.
 Peak resident memory used = 86.6 Mbytes.
 
 finalTimeOP: writing operating point information to rawfile.
@@ -119,8 +119,8 @@ designParamVals: writing netlist parameters to rawfile.
 primitives: writing primitives to rawfile.
 subckts: writing subcircuits to rawfile.
 
-Aggregate audit (4:12:23 PM, Tue Apr 21, 2026):
-Time used: CPU = 335 ms, elapsed = 111 s (1m  50.7s), util. = 303e-03%.
-Time spent in licensing: elapsed = 71.8 ms.
+Aggregate audit (5:16:48 PM, Tue Apr 28, 2026):
+Time used: CPU = 277 ms, elapsed = 473 s (7m  53.2s), util. = 58.6e-03%.
+Time spent in licensing: elapsed = 65.3 ms.
 Peak memory used = 86.7 Mbytes.
 spectre completes with 0 errors, 0 warnings, and 1 notice.
