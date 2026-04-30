@@ -17,4 +17,4 @@ DEFINE ESE_6680 /lcars/home/m/maahit1/cadenceAMI/ese6680
 #Removed by ddDeleteObj: DEFINE project_2_baseline_design ~/cadenceAMI/project_2_baseline_design
 #Removed by ddDeleteObj: DEFINE opamp_project_1 ~/cadenceAMI/opamp_project_1
 #Removed by ddDeleteObj: DEFINE ESE6680_PROJECT3 /lcars/home/m/maahit1/cadenceAMI/ESE6680_PROJECT3
-DEFINE ESE6680_PROJECT3 ~/cadenceAMI/ESE6680_PROJECT3/ESE6680_PROJECT3
+DEFINE ESE6680_PROJECT3 ~/cadenceAMI/ESE6680_PROJECT3

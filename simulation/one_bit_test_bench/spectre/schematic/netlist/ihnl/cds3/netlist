@@ -1,15 +1,15 @@
-    I195 (net024 net017 VDD) inv
-    I25 (net028 Phi1 VDD) inv
-    I194 (net025 Phi1E VDD) inv
-    I189 (net023 Phi2 VDD) inv
-    I29 (net021 net025 VDD) inv
-    I17 (net013 net021 VDD) inv
-    I28 (net017 net022 VDD) inv
+    I193 (net027 Phi2 VDD) inv
+    I192 (net030 Phi1 VDD) inv
+    I175 (net024 net035 VDD) inv
+    I189 (net028 net029 VDD) inv
+    I29 (net035 Phi1E VDD) inv
+    I17 (net010 net024 VDD) inv
+    I28 (net029 net022 VDD) inv
     I14 (CLK net049 VDD) inv
-    I155 (net011 net024 VDD) inv
-    I83 (net022 net013 net023 VDD) nand
-    I82 (Phi1E net011 net028 VDD) nand
-    I15 (CLK net011 net013 VDD) nand
-    I16 (net049 net013 net011 VDD) nand
+    I155 (net017 net028 VDD) inv
+    I83 (net022 net010 net027 VDD) nand
+    I82 (Phi1E net017 net030 VDD) nand
+    I15 (CLK net017 net010 VDD) nand
+    I16 (net049 net010 net017 VDD) nand
 ends non_overlapping_clock
 // End of subcircuit definition.
