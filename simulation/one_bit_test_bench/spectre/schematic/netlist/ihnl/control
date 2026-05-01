@@ -6,7 +6,6 @@ hnlLastStopCellInfo = '(
                           ( "NCSU_Analog_Parts" "cap" "spectre" "30" "1359644823" )
                           ( "NCSU_Analog_Parts" "vdc" "spectre" "33" "1359644876" )
                           ( "NCSU_Analog_Parts" "res" "spectre" "28" "1359644870" )
-                          ( "analogLib" "cap" "spectre" "30" "1538450004" )
                           ( "analogLib" "vdc" "spectre" "33" "1538450004" )
                           ( "analogLib" "vsin" "spectre" "35" "1538450004" )
                           ( "analogLib" "vpulse" "spectre" "34" "1538450004" )

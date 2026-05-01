@@ -1,0 +1,399 @@
+// Generated for: spectre
+// Generated on: May  1 07:52:06 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: 8bit_test
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE6680_PROJECT3
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD
+    N0 (OUT IN 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (OUT IN VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends inv
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD
+    I1 (net5 OUT VDD) inv
+    I0 (IN net5 VDD) inv
+ends buffer
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: nand
+// View name: schematic
+subckt nand A B OUT VDD
+    N1 (net9 B 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N0 (OUT A net9 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P1 (OUT B VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P0 (OUT A VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends nand
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: non_overlapping_clock
+// View name: schematic
+subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD
+    I210 (net24 net13 VDD) buffer
+    I209 (net23 net24 VDD) buffer
+    I208 (net22 net23 VDD) buffer
+    I207 (net21 net22 VDD) buffer
+    I206 (net15 net20 VDD) buffer
+    I205 (net26 Phi1 VDD) buffer
+    I204 (net27 net26 VDD) buffer
+    I203 (net35 net34 VDD) buffer
+    I202 (net33 Phi1E VDD) buffer
+    I201 (net34 net33 VDD) buffer
+    I214 (net16 net13 Phi2 VDD) nand
+    I213 (net20 net12 net21 VDD) nand
+    I198 (net12 net10 net27 VDD) nand
+    I197 (CLK net16 net10 VDD) nand
+    I215 (CLK net15 VDD) inv
+    I212 (net25 net16 VDD) inv
+    I211 (net13 net25 VDD) inv
+    I200 (Phi1E net12 VDD) inv
+    I199 (net10 net35 VDD) inv
+ends non_overlapping_clock
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Final_StaticComparator
+// View name: schematic
+subckt Final_StaticComparator Gnd STROBE Vdd Vi1 Vi2 Vo1 Vo2
+    I0 (net58 Gnd) isource type=dc dc=60u m=1
+    P7 (net023 STROBE net09 net029) ami06P w=10.05u l=600n as=1.5075e-11 \
+        ad=1.5075e-11 ps=23.1u pd=23.1u m=1 region=sat
+    P6 (net09 STROBE net023 net029) ami06P w=10.05u l=600n as=1.5075e-11 \
+        ad=1.5075e-11 ps=23.1u pd=23.1u m=1 region=sat
+    P5 (Vdd net03 Vo2 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (Vdd net09 net03 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (Vdd net023 net09 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (net023 net09 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (Vo1 net018 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (net018 net023 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N5 (Vo1 net018 Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (net018 net023 Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N1 (Gnd net09 net03 Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (Gnd net03 Vo2 Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (net09 Vi1 net58 net026) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N3 (net58 Vi2 net023 net026) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+ends Final_StaticComparator
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Vref_gen
+// View name: schematic
+subckt Vref_gen GND VC VC\' VDD VREF
+    R3 (\3\.25V GND) resistor r=3.25K
+    R2 (VDD \3\.25V) resistor r=1.75K
+    R1 (\1\.75V GND) resistor r=1.75K
+    R0 (VDD \1\.75V) resistor r=3.25K
+    N1 (VREF VC\' \1\.75V GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N0 (VREF VC \3\.25V GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VREF VC\' \3\.25V VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P0 (VREF VC \1\.75V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+ends Vref_gen
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: m_opamp
+// View name: schematic
+subckt m_opamp GND VDD Vin\+ Vin\- Vout
+    M4 (net77 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M3 (net74 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
+        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
+    M6 (Vout net77 GND GND) ami06N w=58.05u l=900n as=8.7075e-11 \
+        ad=8.7075e-11 ps=119.1u pd=119.1u m=1 region=sat
+    M7 (Vout net73 VDD VDD) ami06P w=133.95u l=1.2u as=2.00925e-10 \
+        ad=2.00925e-10 ps=270.9u pd=270.9u m=1 region=sat
+    M5 (net81 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M8 (net73 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
+        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
+    M2 (net77 Vin\+ net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    M1 (net74 Vin\- net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
+        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
+    Iref (net73 GND) isource type=dc dc=60u m=1
+    Cc (net84 Vout) capacitor c=1p m=1
+    Rc (net77 net84) resistor r=1K m=1
+ends m_opamp
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: Final_MDAC
+// View name: schematic
+subckt Final_MDAC GND Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout
+    N2 (Vout Phi2 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (net102 Phi1 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N0 (net99 Phi1E net107 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N3 (Vin\+ Phi2 net97 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (net97 Phi1 Vin\- GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (iPhi2 Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N5 (iPhi1 Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (Vout iPhi2 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P2 (net102 iPhi1 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P0 (net97 iPhi1 Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P3 (Vin\+ iPhi2 net97 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P5 (iPhi2 Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (iPhi1 Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    Cf (net99 net100) capacitor c=1p m=1
+    Cs (net97 net99) capacitor c=2p m=1
+    V2 (net102 GND) vsource type=dc dc=2.5
+    V0 (net106 GND) vsource type=dc dc=2.5
+    V1 (net107 GND) vsource type=dc dc=2.5
+    I0 (GND VDD net106 net99 Vout) m_opamp
+ends Final_MDAC
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: BOOT_THA
+// View name: schematic
+subckt BOOT_THA CLKS GND VDD VIN VOUT
+    N7 (GND CLKS_ VY GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (VY VDD VG GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    N5 (CLKS_ CLKS GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (VBOTT CLKS_ GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (VOUT VG VIN GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (VIN VG VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (VBOTT VG VX GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (VX CLKS VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (VOUT CLKS_ VIN VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (VG VX VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (VDD VG VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VX CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (CLKS_ CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    C1 (VOUT GND) capacitor c=1p
+    C0 (VTOP VBOTT) capacitor c=1p
+ends BOOT_THA
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: DFF
+// View name: schematic
+subckt DFF CLK D GND Q VDD
+    N8 (net21 CLK\' net19 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N7 (net19 CLK net18 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N6 (net11 CLK net9 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N5 (net9 CLK\' D GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (CLK\' CLK GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N3 (GND Q net21 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (Q net19 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N1 (GND net18 net11 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (net18 net9 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (net21 Q VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (VDD net19 Q VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (CLK\' CLK VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VDD net18 net11 VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (net18 net9 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+ends DFF
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: one_bit_stage
+// View name: schematic
+subckt one_bit_stage BIT CLKIN GND VDD VIN VOUT
+    I0 (CLKIN PHI1 PHI1E PHI2 VDD) non_overlapping_clock
+    I1 (GND PHI2 VDD BOOT_VOUT DC Vo1 Vo2) Final_StaticComparator
+    I2 (GND Vo1 Vo2 VDD VREF) Vref_gen
+    I3 (GND PHI1 PHI1E PHI2 VDD BOOT_VOUT VREF VOUT) Final_MDAC
+    I4 (PHI1 GND VDD VIN BOOT_VOUT) BOOT_THA
+    V0 (DC GND) vsource dc=2.5 type=dc
+    I16 (CLKIN Vo1 GND BIT VDD) DFF
+ends one_bit_stage
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR1
+// View name: schematic
+subckt SR1 CLKIN GND SR1IP SR1OP VDD
+    I0 (CLKIN SR1IP GND SR1OP VDD) DFF
+ends SR1
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR2
+// View name: schematic
+subckt SR2 CLKIN GND SR2IP SR2OP VDD
+    I1 (CLKIN net17 GND SR2OP VDD) DFF
+    I0 (CLKIN SR2IP GND net17 VDD) DFF
+ends SR2
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR3
+// View name: schematic
+subckt SR3 CLKIN GND SR3IP SR3OP VDD
+    I2 (CLKIN net16 GND SR3OP VDD) DFF
+    I1 (CLKIN net17 GND net16 VDD) DFF
+    I0 (CLKIN SR3IP GND net17 VDD) DFF
+ends SR3
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR4
+// View name: schematic
+subckt SR4 CLKIN GND SR4IP SR4OP VDD
+    I3 (CLKIN net32 GND SR4OP VDD) DFF
+    I2 (CLKIN net31 GND net32 VDD) DFF
+    I1 (CLKIN net30 GND net31 VDD) DFF
+    I0 (CLKIN SR4IP GND net30 VDD) DFF
+ends SR4
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR5
+// View name: schematic
+subckt SR5 CLKIN GND SR5IP SR5OP VDD
+    I4 (CLKIN net40 GND SR5OP VDD) DFF
+    I3 (CLKIN net43 GND net40 VDD) DFF
+    I2 (CLKIN net41 GND net43 VDD) DFF
+    I1 (CLKIN net42 GND net41 VDD) DFF
+    I0 (CLKIN SR5IP GND net42 VDD) DFF
+ends SR5
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR6
+// View name: schematic
+subckt SR6 CLKIN GND SR6IP SR6OP VDD
+    I5 (CLKIN net33 GND SR6OP VDD) DFF
+    I4 (CLKIN net34 GND net33 VDD) DFF
+    I3 (CLKIN net35 GND net34 VDD) DFF
+    I2 (CLKIN net36 GND net35 VDD) DFF
+    I1 (CLKIN net37 GND net36 VDD) DFF
+    I0 (CLKIN SR6IP GND net37 VDD) DFF
+ends SR6
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR7
+// View name: schematic
+subckt SR7 CLKIN GND SR7IP SR7OP VDD
+    I6 (CLKIN net56 GND SR7OP VDD) DFF
+    I5 (CLKIN net61 GND net56 VDD) DFF
+    I4 (CLKIN net57 GND net61 VDD) DFF
+    I3 (CLKIN net58 GND net57 VDD) DFF
+    I2 (CLKIN net59 GND net58 VDD) DFF
+    I1 (CLKIN net60 GND net59 VDD) DFF
+    I0 (CLKIN SR7IP GND net60 VDD) DFF
+ends SR7
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: 8bit_ADC
+// View name: schematic
+subckt ESE6680_PROJECT3_8bit_ADC_schematic B1 B2 B3 B4 B5 B6 B7 B8 CLKIN \
+        GND VDD VIN VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 VOUT6 VOUT7 VOUT8
+    I21 (SB7 CLKIN GND VDD VOUT6 VOUT7) one_bit_stage
+    I20 (SB6 CLKIN GND VDD VOUT5 VOUT6) one_bit_stage
+    I19 (SB5 CLKIN GND VDD VOUT4 VOUT5) one_bit_stage
+    I18 (SB4 CLKIN GND VDD VOUT3 VOUT4) one_bit_stage
+    I17 (SB3 CLKIN GND VDD VOUT2 VOUT3) one_bit_stage
+    I16 (SB2 CLKIN GND VDD VOUT1 VOUT2) one_bit_stage
+    I8 (SB1 CLKIN GND VDD VIN VOUT1) one_bit_stage
+    I22 (B8 CLKIN GND VDD VOUT7 VOUT8) one_bit_stage
+    I23 (CLKIN GND SB7 B7 VDD) SR1
+    I24 (CLKIN GND SB6 B6 VDD) SR2
+    I25 (CLKIN GND SB5 B5 VDD) SR3
+    I26 (CLKIN GND SB4 B4 VDD) SR4
+    I27 (CLKIN GND SB3 B3 VDD) SR5
+    I28 (CLKIN GND SB2 B2 VDD) SR6
+    I29 (CLKIN GND SB1 B1 VDD) SR7
+ends ESE6680_PROJECT3_8bit_ADC_schematic
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
+// Cell name: 8bit_test
+// View name: schematic
+I0 (B1 B2 B3 B4 B5 B6 B7 B8 CLKIN 0 VDD VIN VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 \
+        VOUT6 VOUT7 VOUT8) ESE6680_PROJECT3_8bit_ADC_schematic
+V1 (VDD 0) vsource dc=5 type=dc
+V4 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=500K
+V5 (CLKIN 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p \
+        fall=10p width=50n
+I5 (B1 B2 B3 B4 B5 B6 B7 B8 vout) dac_8bit_ideal
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=30u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/dac_8bit_ideal/veriloga/veriloga.va"

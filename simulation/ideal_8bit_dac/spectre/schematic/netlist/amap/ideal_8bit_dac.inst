@@ -1,0 +1,6 @@
+HEADER
+"PSFversion" "1.00"
+"I0n" "ahdlLib_adc_8bit_ideal_veriloga"
+"V2n" "analogLib_vsin_spectre"
+"V3n" "analogLib_vpulse_spectre"
+"I5n" "ahdlLib_dac_8bit_ideal_veriloga"

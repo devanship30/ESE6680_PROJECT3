@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"I210n I209n I208n I207n I206n I205n I204n I203n I202n I201n" "buffer"
+"I214n I213n I198n I197n" "nand"
+"I215n I212n I211n I200n I199n" "inv"
+"CLKv" ":1v"
+"Phi1v" ":2v"
+"Phi1Ev" ":3v"
+"Phi2v" ":4v"
+"VDDv" ":5v"

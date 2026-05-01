@@ -1,0 +1,19 @@
+    N2 (net016 phi1 Output 0) ami06N w=6.45u l=600n as=9.675e-12 \
+        ad=9.675e-12 ps=15.9u pd=15.9u m=1 region=sat
+    N0 (Vin phi1 net02 0) ami06N w=4.95u l=600n as=7.425e-12 ad=7.425e-12 \
+        ps=12.9u pd=12.9u m=1 region=sat
+    N1 (net02 phi2 half_VDD 0) ami06N w=3.45u l=600n as=5.175e-12 \
+        ad=5.175e-12 ps=9.9u pd=9.9u m=1 region=sat
+    C7 (net02 net016) capacitor c=1.35p m=1
+    C3 (Output 0) capacitor c=1p m=1
+    C8 (net016 Output) capacitor c=1.35p m=1
+    I40 (0 Output VDD net05 net016) opamp_project_1
+    V9 (net05 0) vsource type=dc dc=2.5
+    P2 (net02 phi2\' half_VDD VDD) ami06P w=4.95u l=600n as=7.425e-12 \
+        ad=7.425e-12 ps=12.9u pd=12.9u m=1 region=sat
+    P0 (Output phi1\' net016 VDD) ami06P w=7.5u l=600n as=1.125e-11 \
+        ad=1.125e-11 ps=18.0u pd=18.0u m=1 region=sat
+    P1 (net02 phi1\' Vin VDD) ami06P w=45.0u l=600n as=6.75e-11 \
+        ad=6.75e-11 ps=93.0u pd=93.0u m=1 region=sat
+ends project_2_baseline_design
+// End of subcircuit definition.

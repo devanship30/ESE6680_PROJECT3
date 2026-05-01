@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: SR5
+// View name: schematic
+subckt SR5 CLKIN GND SR5IP SR5OP VDD

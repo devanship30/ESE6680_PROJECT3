@@ -2,6 +2,5 @@ HEADER
 "PSFversion" "1.00"
 "I0n" "Final_MDAC"
 "I3n" "non_overlapping_clock"
-"V2n V1n" "NCSU_Analog_Parts_vdc_spectre"
+"V4n V2n V1n" "NCSU_Analog_Parts_vdc_spectre"
 "V3n" "NCSU_Analog_Parts_vpulse_spectre"
-"V4n" "NCSU_Analog_Parts_vsin_spectre"

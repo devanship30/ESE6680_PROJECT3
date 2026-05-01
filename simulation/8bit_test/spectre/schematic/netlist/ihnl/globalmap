@@ -1,0 +1,28 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/SR2/schematic SR2
+ESE6680_PROJECT3/Vref_gen/schematic Vref_gen
+ESE6680_PROJECT3/one_bit_stage/schematic one_bit_stage
+ESE6680_PROJECT3/inv/schematic inv
+ESE6680_PROJECT3/DFF/schematic DFF
+ESE6680_PROJECT3/SR1/schematic SR1
+ESE6680_PROJECT3/SR6/schematic SR6
+ESE6680_PROJECT3/Final_MDAC/schematic Final_MDAC
+ESE6680_PROJECT3/8bit_ADC/schematic ESE6680_PROJECT3_8bit_ADC_schematic
+ESE6680_PROJECT3/buffer/schematic buffer
+ESE6680_PROJECT3/SR7/schematic SR7
+ESE6680_PROJECT3/SR3/schematic SR3
+ESE6680_PROJECT3/SR5/schematic SR5
+ESE6680_PROJECT3/8bit_test/schematic ESE6680_PROJECT3_8bit_test_schematic
+ESE6680_PROJECT3/BOOT_THA/schematic BOOT_THA
+ESE6680_PROJECT3/Final_StaticComparator/schematic Final_StaticComparator
+ESE6680_PROJECT3/non_overlapping_clock/schematic non_overlapping_clock
+ESE6680_PROJECT3/SR4/schematic SR4
+ESE6680_PROJECT3/m_opamp/schematic m_opamp
+ESE6680_PROJECT3/nand/schematic nand
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

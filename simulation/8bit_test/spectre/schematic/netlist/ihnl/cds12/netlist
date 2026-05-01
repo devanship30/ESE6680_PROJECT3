@@ -1,0 +1,5 @@
+    I2 (CLKIN net16 GND SR3OP VDD) DFF
+    I1 (CLKIN net17 GND net16 VDD) DFF
+    I0 (CLKIN SR3IP GND net17 VDD) DFF
+ends SR3
+// End of subcircuit definition.

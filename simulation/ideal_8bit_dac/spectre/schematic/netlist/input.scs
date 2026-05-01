@@ -1,0 +1,34 @@
+// Generated for: spectre
+// Generated on: Apr 30 19:14:41 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: ideal_8bit_dac
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/lcars/home/e/ese6680/ami06.scs"
+
+// Library name: ESE6680_PROJECT3
+// Cell name: ideal_8bit_dac
+// View name: schematic
+I0 (VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 VOUT6 VOUT7 VOUT8 net18 net19) \
+        adc_8bit_ideal
+V2 (net18 0) vsource dc=2.5 type=sine ampl=1.5 freq=100K
+V3 (net19 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=100n
+I5 (VOUT8 VOUT7 VOUT6 VOUT5 VOUT4 VOUT3 VOUT2 VOUT1 vout) dac_8bit_ideal
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=20u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/adc_8bit_ideal/veriloga/veriloga.va"
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/dac_8bit_ideal/veriloga/veriloga.va"

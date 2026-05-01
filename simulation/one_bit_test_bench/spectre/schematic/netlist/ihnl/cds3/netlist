@@ -1,15 +1,27 @@
-    I193 (net027 Phi2 VDD) inv
-    I192 (net030 Phi1 VDD) inv
-    I175 (net024 net035 VDD) inv
-    I189 (net028 net029 VDD) inv
-    I29 (net035 Phi1E VDD) inv
-    I17 (net010 net024 VDD) inv
-    I28 (net029 net022 VDD) inv
-    I14 (CLK net049 VDD) inv
-    I155 (net017 net028 VDD) inv
-    I83 (net022 net010 net027 VDD) nand
-    I82 (Phi1E net017 net030 VDD) nand
-    I15 (CLK net017 net010 VDD) nand
-    I16 (net049 net010 net017 VDD) nand
+    I221 (net038 phi1\' VDD) buffer
+    I220 (net039 net038 VDD) buffer
+    I218 (net037 phi2\' VDD) buffer
+    I217 (net036 net037 VDD) buffer
+    I205 (net26 Phi1 VDD) buffer
+    I208 (net22 net23 VDD) buffer
+    I203 (net35 net34 VDD) buffer
+    I210 (net24 net13 VDD) buffer
+    I207 (net21 net22 VDD) buffer
+    I206 (net15 net20 VDD) buffer
+    I209 (net23 net24 VDD) buffer
+    I202 (net33 Phi1E VDD) buffer
+    I204 (net27 net26 VDD) buffer
+    I201 (net34 net33 VDD) buffer
+    I214 (net16 net13 Phi2 VDD) nand
+    I213 (net20 net12 net21 VDD) nand
+    I198 (net12 net10 net27 VDD) nand
+    I197 (CLK net16 net10 VDD) nand
+    I219 (Phi1 net039 VDD) inv
+    I216 (Phi2 net036 VDD) inv
+    I215 (CLK net15 VDD) inv
+    I212 (net025 net16 VDD) inv
+    I211 (net13 net025 VDD) inv
+    I200 (Phi1E net12 VDD) inv
+    I199 (net10 net35 VDD) inv
 ends non_overlapping_clock
 // End of subcircuit definition.

@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Apr 30 19:14:41 2026
+// Design library name: ESE6680_PROJECT3
+// Design cell name: ideal_8bit_dac
+// Design view name: schematic
+simulator lang=spectre
+global 0

@@ -1,0 +1,2 @@
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/adc_8bit_ideal/veriloga/veriloga.va"
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/dac_8bit_ideal/veriloga/veriloga.va"

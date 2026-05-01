@@ -1,0 +1,6 @@
+    I3 (CLKIN net32 GND SR4OP VDD) DFF
+    I2 (CLKIN net31 GND net32 VDD) DFF
+    I1 (CLKIN net30 GND net31 VDD) DFF
+    I0 (CLKIN SR4IP GND net30 VDD) DFF
+ends SR4
+// End of subcircuit definition.

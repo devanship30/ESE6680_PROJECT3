@@ -1,0 +1,5 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: BOOT_THA
+// View name: schematic
+subckt BOOT_THA CLKS GND VDD VIN VOUT

@@ -6,5 +6,5 @@ I0 (0 STROBE net3 Vi1 Vi2 Vo1 Vo2) Final_StaticComparator
 V2 (Vi2 0) vsource dc=2.5 type=dc
 V0 (net3 0) vsource dc=5 type=dc
 V1 (Vi1 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
-V3 (STROBE 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
-        fall=10p width=100n
+V3 (STROBE 0) vsource type=pulse val0=5 val1=0 period=200n rise=200p \
+        width=100n

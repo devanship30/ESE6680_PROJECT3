@@ -37,30 +37,39 @@ ends nand
 // Library name: ESE6680_PROJECT3
 // Cell name: non_overlapping_clock
 // View name: schematic
-subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD
-    I25 (net028 Phi1 VDD) inv
-    I27 (net051 Phi2 VDD) inv
-    I159 (CLK net039 VDD) inv
-    I29 (Phi1E net011 VDD) inv
-    I17 (net010 net013 VDD) inv
-    I28 (net029 net022 VDD) inv
-    I14 (net039 net049 VDD) inv
-    I155 (net035 net017 VDD) inv
-    I176 (net037 Phi1E VDD) buffer
-    I164 (net030 net029 VDD) buffer
-    I175 (net013 net037 VDD) buffer
-    I163 (net017 net030 VDD) buffer
-    I83 (net022 net022 net051 VDD) nand
-    I82 (net011 net011 net028 VDD) nand
-    I15 (net039 net035 net010 VDD) nand
-    I16 (net049 net010 net035 VDD) nand
+subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD phi1\' phi2\'
+    I218 (net037 phi2\' VDD) buffer
+    I217 (net036 net037 VDD) buffer
+    I220 (net039 net038 VDD) buffer
+    I221 (net038 phi1\' VDD) buffer
+    I205 (net26 Phi1 VDD) buffer
+    I208 (net22 net23 VDD) buffer
+    I203 (net35 net34 VDD) buffer
+    I210 (net24 net13 VDD) buffer
+    I207 (net21 net22 VDD) buffer
+    I206 (net15 net20 VDD) buffer
+    I209 (net23 net24 VDD) buffer
+    I202 (net33 Phi1E VDD) buffer
+    I204 (net27 net26 VDD) buffer
+    I201 (net34 net33 VDD) buffer
+    I214 (net16 net13 Phi2 VDD) nand
+    I213 (net20 net12 net21 VDD) nand
+    I198 (net12 net10 net27 VDD) nand
+    I197 (CLK net16 net10 VDD) nand
+    I215 (CLK net15 VDD) inv
+    I212 (net025 net16 VDD) inv
+    I211 (net13 net025 VDD) inv
+    I216 (Phi2 net036 VDD) inv
+    I219 (Phi1 net039 VDD) inv
+    I200 (Phi1E net12 VDD) inv
+    I199 (net10 net35 VDD) inv
 ends non_overlapping_clock
 // End of subcircuit definition.
 
 // Library name: ESE6680_PROJECT3
 // Cell name: clock_test
 // View name: schematic
-I0 (CLK Phi1 Phi1E Phi2 VDD) non_overlapping_clock
+I0 (CLK phi1 phi1E phi2 VDD phi1\' phi2\') non_overlapping_clock
 V0 (VDD 0) vsource type=dc dc=5
 V1 (CLK 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
         width=90n

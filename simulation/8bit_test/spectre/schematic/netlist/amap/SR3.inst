@@ -1,0 +1,8 @@
+HEADER
+"PSFversion" "1.00"
+"I2n I1n I0n" "DFF"
+"CLKINv" ":1v"
+"GNDv" ":2v"
+"SR3IPv" ":3v"
+"SR3OPv" ":4v"
+"VDDv" ":5v"

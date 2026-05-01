@@ -1,0 +1,9 @@
+CADENCE IHNL11140
+$model
+ESE6680_PROJECT3/ideal_8bit_dac/schematic ideal_8bit_dac
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

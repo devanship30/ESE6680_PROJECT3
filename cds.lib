@@ -1,8 +1,10 @@
+# File Created by Devanshi Kalpeshbhai Patel at Thu Apr 30 18:59:30 2026
+# assisted by CdsLibEditor
 # File created by Tania Khanna 
 
 ### Cadence basic libs
 ###
-Define analogLib $CDSDIR/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE analogLib $CDSDIR/tools/dfII/etc/cdslib/artist/analogLib
 
 ### NCSU kits libs
 ###
@@ -18,3 +20,4 @@ DEFINE ESE_6680 /lcars/home/m/maahit1/cadenceAMI/ese6680
 #Removed by ddDeleteObj: DEFINE opamp_project_1 ~/cadenceAMI/opamp_project_1
 #Removed by ddDeleteObj: DEFINE ESE6680_PROJECT3 /lcars/home/m/maahit1/cadenceAMI/ESE6680_PROJECT3
 DEFINE ESE6680_PROJECT3 ~/cadenceAMI/ESE6680_PROJECT3
+DEFINE ahdlLib /lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib

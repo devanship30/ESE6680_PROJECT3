@@ -1,7 +1,7 @@
 hnlLastStopCellInfo = '(
                            ( "NCSU_Analog_Parts" "idc" "spectre" "33" "1359644798" )
-                          ( "NCSU_Analog_Parts" "nmos4" "spectre" "47" "1359644861" )
                           ( "NCSU_Analog_Parts" "pmos4" "spectre" "47" "1359644800" )
+                          ( "NCSU_Analog_Parts" "nmos4" "spectre" "47" "1359644861" )
                           ( "analogLib" "vdc" "spectre" "33" "1538450004" )
                           ( "analogLib" "vsin" "spectre" "35" "1538450004" )
                           ( "analogLib" "vpulse" "spectre" "34" "1538450004" )
@@ -761,7 +761,7 @@ hnlLastNetNameDifferentFrom = '( )
 hnlLastTermNameDifferentFrom = '( )
 hnlLastParamNameDifferentFrom = '( )
 hnlLastLibInfo = '(
-                    ( "ESE6680_PROJECT3" "1777393947" )
+                    ( "ESE6680_PROJECT3" "1777500637" )
                   )
 hnlLastConstants = '(
                       "P_CELSIUS0"

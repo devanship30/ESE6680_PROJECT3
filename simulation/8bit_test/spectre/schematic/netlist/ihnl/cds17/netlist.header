@@ -1,0 +1,6 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: 8bit_ADC
+// View name: schematic
+subckt ESE6680_PROJECT3_8bit_ADC_schematic B1 B2 B3 B4 B5 B6 B7 B8 CLKIN \
+        GND VDD VIN VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 VOUT6 VOUT7 VOUT8

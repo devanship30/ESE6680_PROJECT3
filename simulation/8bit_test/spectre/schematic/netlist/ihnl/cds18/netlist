@@ -1,0 +1,11 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: 8bit_test
+// View name: schematic
+I0 (B1 B2 B3 B4 B5 B6 B7 B8 CLKIN 0 VDD VIN VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 \
+        VOUT6 VOUT7 VOUT8) ESE6680_PROJECT3_8bit_ADC_schematic
+V1 (VDD 0) vsource dc=5 type=dc
+V4 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=500K
+V5 (CLKIN 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p \
+        fall=10p width=50n
+I5 (B1 B2 B3 B4 B5 B6 B7 B8 vout) dac_8bit_ideal

@@ -1,0 +1,8 @@
+    I5 (CLKIN net33 GND SR6OP VDD) DFF
+    I4 (CLKIN net34 GND net33 VDD) DFF
+    I3 (CLKIN net35 GND net34 VDD) DFF
+    I2 (CLKIN net36 GND net35 VDD) DFF
+    I1 (CLKIN net37 GND net36 VDD) DFF
+    I0 (CLKIN SR6IP GND net37 VDD) DFF
+ends SR6
+// End of subcircuit definition.

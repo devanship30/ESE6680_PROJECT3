@@ -1,0 +1,56 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "8bit_test"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/lcars/home/p/patel5/cadenceAMI/simulation/8bit_test/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "ESE6680_PROJECT3/one_bit_stage/schematic" "one_bit_stage" )
+( "ESE6680_PROJECT3/BOOT_THA/schematic" "BOOT_THA" )
+( "ESE6680_PROJECT3/SR3/schematic" "SR3" )
+( "ESE6680_PROJECT3/Final_StaticComparator/schematic" "Final_StaticComparator" )
+( "ESE6680_PROJECT3/SR5/schematic" "SR5" )
+( "ESE6680_PROJECT3/8bit_ADC/schematic" "ESE6680_PROJECT3_8bit_ADC_schematic" )
+( "ESE6680_PROJECT3/DFF/schematic" "DFF" )
+( "ESE6680_PROJECT3/SR2/schematic" "SR2" )
+( "ESE6680_PROJECT3/8bit_test/schematic" "ESE6680_PROJECT3_8bit_test_schematic" )
+( "ESE6680_PROJECT3/m_opamp/schematic" "m_opamp" )
+( "ESE6680_PROJECT3/SR7/schematic" "SR7" )
+( "ESE6680_PROJECT3/buffer/schematic" "buffer" )
+( "ESE6680_PROJECT3/Final_MDAC/schematic" "Final_MDAC" )
+( "ESE6680_PROJECT3/nand/schematic" "nand" )
+( "ESE6680_PROJECT3/inv/schematic" "inv" )
+( "ESE6680_PROJECT3/non_overlapping_clock/schematic" "non_overlapping_clock" )
+( "ESE6680_PROJECT3/Vref_gen/schematic" "Vref_gen" )
+( "ESE6680_PROJECT3/SR4/schematic" "SR4" )
+( "ESE6680_PROJECT3/SR1/schematic" "SR1" )
+( "ESE6680_PROJECT3/SR6/schematic" "SR6" )
+ )
+( "SR7" "ihnl/cds16/map" )
+( "Final_StaticComparator" "ihnl/cds3/map" )
+( "non_overlapping_clock" "ihnl/cds2/map" )
+( "BOOT_THA" "ihnl/cds7/map" )
+( "ESE6680_PROJECT3_8bit_ADC_schematic" "ihnl/cds17/map" )
+( "SR1" "ihnl/cds10/map" )
+( "buffer" "ihnl/cds19/map" )
+( "SR5" "ihnl/cds14/map" )
+( "SR4" "ihnl/cds13/map" )
+( "DFF" "ihnl/cds8/map" )
+( "ESE6680_PROJECT3_8bit_test_schematic" "ihnl/cds18/map" )
+( "SR3" "ihnl/cds12/map" )
+( "SR2" "ihnl/cds11/map" )
+( "Vref_gen" "ihnl/cds4/map" )
+( "SR6" "ihnl/cds15/map" )
+( "nand" "ihnl/cds1/map" )
+( "m_opamp" "ihnl/cds5/map" )
+( "one_bit_stage" "ihnl/cds9/map" )
+( "inv" "ihnl/cds0/map" )
+( "Final_MDAC" "ihnl/cds6/map" )
+ )

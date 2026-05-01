@@ -1,5 +1,5 @@
 // Generated for: spectre
-// Generated on: Apr 29 15:24:02 2026
+// Generated on: May  1 08:49:08 2026
 // Design library name: ESE6680_PROJECT3
 // Design cell name: Test1
 // Design view name: schematic
@@ -84,6 +84,15 @@ ends inv
 // End of subcircuit definition.
 
 // Library name: ESE6680_PROJECT3
+// Cell name: buffer
+// View name: schematic
+subckt buffer IN OUT VDD
+    I1 (net5 OUT VDD) inv
+    I0 (IN net5 VDD) inv
+ends buffer
+// End of subcircuit definition.
+
+// Library name: ESE6680_PROJECT3
 // Cell name: nand
 // View name: schematic
 subckt nand A B OUT VDD
@@ -102,19 +111,25 @@ ends nand
 // Cell name: non_overlapping_clock
 // View name: schematic
 subckt non_overlapping_clock CLK Phi1 Phi1E Phi2 VDD
-    I195 (net024 net017 VDD) inv
-    I25 (net028 Phi1 VDD) inv
-    I194 (net025 Phi1E VDD) inv
-    I189 (net023 Phi2 VDD) inv
-    I29 (net021 net025 VDD) inv
-    I17 (net013 net021 VDD) inv
-    I28 (net017 net022 VDD) inv
-    I14 (CLK net049 VDD) inv
-    I155 (net011 net024 VDD) inv
-    I83 (net022 net013 net023 VDD) nand
-    I82 (Phi1E net011 net028 VDD) nand
-    I15 (CLK net011 net013 VDD) nand
-    I16 (net049 net013 net011 VDD) nand
+    I205 (net26 Phi1 VDD) buffer
+    I208 (net22 net23 VDD) buffer
+    I203 (net35 net34 VDD) buffer
+    I210 (net24 net13 VDD) buffer
+    I207 (net21 net22 VDD) buffer
+    I206 (net15 net20 VDD) buffer
+    I209 (net23 net24 VDD) buffer
+    I202 (net33 Phi1E VDD) buffer
+    I204 (net27 net26 VDD) buffer
+    I201 (net34 net33 VDD) buffer
+    I214 (net16 net13 Phi2 VDD) nand
+    I213 (net20 net12 net21 VDD) nand
+    I198 (net12 net10 net27 VDD) nand
+    I197 (CLK net16 net10 VDD) nand
+    I215 (CLK net15 VDD) inv
+    I212 (net25 net16 VDD) inv
+    I211 (net13 net25 VDD) inv
+    I200 (Phi1E net12 VDD) inv
+    I199 (net10 net35 VDD) inv
 ends non_overlapping_clock
 // End of subcircuit definition.
 
@@ -123,11 +138,11 @@ ends non_overlapping_clock
 // View name: schematic
 I0 (0 Phi1 Phi1E Phi2 net09 Vin\+ Vin\- Vout) Final_MDAC
 I3 (net013 Phi1 Phi1E Phi2 net09) non_overlapping_clock
+V4 (Vin\- 0) vsource type=dc dc=2.8
 V2 (net09 0) vsource type=dc dc=5
-V1 (Vin\- 0) vsource type=dc dc=2.5
-V3 (net013 0) vsource type=pulse val0=0 val1=5 period=100n delay=0 \
-        rise=10p fall=10p width=50n
-V4 (Vin\+ 0) vsource type=sine sinedc=2.5 ampl=1 freq=100K
+V1 (Vin\+ 0) vsource type=dc dc=3.25
+V3 (net013 0) vsource type=pulse val0=0 val1=5 period=2u delay=0 rise=1n \
+        fall=1n width=900n
 simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
     tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
     digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \

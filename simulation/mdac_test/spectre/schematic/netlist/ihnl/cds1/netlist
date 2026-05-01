@@ -1,34 +1,34 @@
-    N2 (Vout Phi2 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N1 (net102 Phi1 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+    Cf (Cf_top net5) cap
+    Cs (Cs_top net5) cap
+    N10 (Cs_top Phi1 Vin\+ GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    N0 (net99 Phi1E net107 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+    N9 (Cf_top Phi1 Vin\+ GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    N3 (Vin\+ Phi2 net97 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N4 (net97 Phi1 Vin\- GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N6 (iPhi2 Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N5 (iPhi1 Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    P1 (Vout iPhi2 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+    N8 (Cs_top Phi2 Vin\- GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P2 (net102 iPhi1 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P0 (net97 iPhi1 Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P3 (Vin\+ iPhi2 net97 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P5 (iPhi2 Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+    N7 (\2\.5V Phi2 Vout GND) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    P4 (iPhi1 Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+    N6 (Cf_top Phi1 Vout GND) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    Cf (net99 net100) capacitor c=1p m=1
-    Cs (net97 net99) capacitor c=2p m=1
-    V2 (net102 GND) vsource type=dc dc=2.5
-    V0 (net106 GND) vsource type=dc dc=2.5
-    V1 (net107 GND) vsource type=dc dc=2.5
-    I0 (GND VDD net106 net99 Vout) m_opamp
+    N1 (Phi2\' Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (Phi1\' Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    I1 (GND Vout VDD \2\.5V net5) opamp_project_1
+    P12 (Cs_top Phi1\' Vin\+ VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P11 (Cf_top Phi1\' Vin\+ VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P10 (Cs_top Phi2\' Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P9 (\2\.5V Phi2\' Vout VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P8 (Cf_top Phi1\' Vout VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P1 (Phi2\' Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (Phi1\' Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    V0 (\2\.5V 0) vsource dc=2.5 type=dc
 ends Final_MDAC
 // End of subcircuit definition.

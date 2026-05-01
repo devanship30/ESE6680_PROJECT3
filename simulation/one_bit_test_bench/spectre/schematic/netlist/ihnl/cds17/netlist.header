@@ -1,0 +1,6 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: project_2_baseline_design
+// View name: schematic
+subckt project_2_baseline_design Output VDD Vin half_VDD phi1 phi1\' phi2 \
+        phi2\'

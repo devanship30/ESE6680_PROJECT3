@@ -1,0 +1,9 @@
+    I6 (CLKIN net56 GND SR7OP VDD) DFF
+    I5 (CLKIN net61 GND net56 VDD) DFF
+    I4 (CLKIN net57 GND net61 VDD) DFF
+    I3 (CLKIN net58 GND net57 VDD) DFF
+    I2 (CLKIN net59 GND net58 VDD) DFF
+    I1 (CLKIN net60 GND net59 VDD) DFF
+    I0 (CLKIN SR7IP GND net60 VDD) DFF
+ends SR7
+// End of subcircuit definition.

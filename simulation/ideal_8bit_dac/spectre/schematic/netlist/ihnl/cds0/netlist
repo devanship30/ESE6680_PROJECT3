@@ -1,0 +1,10 @@
+
+// Library name: ESE6680_PROJECT3
+// Cell name: ideal_8bit_dac
+// View name: schematic
+I0 (VOUT1 VOUT2 VOUT3 VOUT4 VOUT5 VOUT6 VOUT7 VOUT8 net18 net19) \
+        adc_8bit_ideal
+V2 (net18 0) vsource dc=2.5 type=sine ampl=1.5 freq=100K
+V3 (net19 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
+        fall=10p width=100n
+I5 (VOUT8 VOUT7 VOUT6 VOUT5 VOUT4 VOUT3 VOUT2 VOUT1 vout) dac_8bit_ideal

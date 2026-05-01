@@ -1,0 +1,14 @@
+    R3 (\3\.25V GND) resistor r=3.25K
+    R2 (VDD \3\.25V) resistor r=1.75K
+    R1 (\1\.75V GND) resistor r=1.75K
+    R0 (VDD \1\.75V) resistor r=3.25K
+    N1 (VREF VC\' \1\.75V GND) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N0 (VREF VC \3\.25V GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (VREF VC\' \3\.25V VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P0 (VREF VC \1\.75V VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+ends Vref_gen
+// End of subcircuit definition.

@@ -2,6 +2,7 @@ CADENCE IHNL11140
 $model
 ESE6680_PROJECT3/mdac_test/schematic mdac_test
 ESE6680_PROJECT3/Final_MDAC/schematic Final_MDAC
+ESE6680_PROJECT3/opamp_project_1/schematic opamp_project_1
 ESE6680_PROJECT3/m_opamp/schematic m_opamp
 $endmodel
 $net

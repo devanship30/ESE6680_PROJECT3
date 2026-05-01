@@ -13,10 +13,10 @@
  )
 ( model
 ( "ESE6680_PROJECT3/mdac_test/schematic" "mdac_test" )
-( "ESE6680_PROJECT3/m_opamp/schematic" "m_opamp" )
 ( "ESE6680_PROJECT3/Final_MDAC/schematic" "Final_MDAC" )
+( "ESE6680_PROJECT3/opamp_project_1/schematic" "opamp_project_1" )
  )
-( "m_opamp" "ihnl/cds0/map" )
+( "opamp_project_1" "ihnl/cds3/map" )
 ( "Final_MDAC" "ihnl/cds1/map" )
 ( "mdac_test" "ihnl/cds2/map" )
  )

@@ -6,7 +6,6 @@ hnlLastStopCellInfo = '(
                           ( "NCSU_Analog_Parts" "idc" "spectre" "33" "1359644798" )
                           ( "NCSU_Analog_Parts" "res" "spectre" "28" "1359644870" )
                           ( "NCSU_Analog_Parts" "vpulse" "spectre" "34" "1359644809" )
-                          ( "NCSU_Analog_Parts" "vsin" "spectre" "35" "1359644891" )
                        )
 hnlLastMaxNameLength = 1024
 hnlLastNamePrefix = "hnl_"
@@ -764,7 +763,7 @@ hnlLastTermNameDifferentFrom = '( )
 hnlLastParamNameDifferentFrom = '( )
 hnlLastLibInfo = '(
                     ( "ese6680" "1770315103" )
-                   ( "ESE6680_PROJECT3" "1777393947" )
+                   ( "ESE6680_PROJECT3" "1777500637" )
                   )
 hnlLastConstants = '(
                       "P_CELSIUS0"

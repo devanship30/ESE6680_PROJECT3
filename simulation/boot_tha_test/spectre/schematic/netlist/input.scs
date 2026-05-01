@@ -1,5 +1,5 @@
 // Generated for: spectre
-// Generated on: Apr 30 02:21:55 2026
+// Generated on: May  1 10:31:48 2026
 // Design library name: ESE6680_PROJECT3
 // Design cell name: boot_tha_test
 // Design view name: schematic
@@ -19,24 +19,24 @@ subckt BOOT_THA CLKS GND VDD VIN VOUT
         ps=6u pd=6u m=1 region=sat
     N4 (VBOTT CLKS_ GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    N3 (VOUT VG VIN GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
+    N3 (VOUT VG VIN GND) ami06N w=7.05u l=600n as=1.0575e-11 ad=1.0575e-11 \
+        ps=17.1u pd=17.1u m=1 region=sat
     N2 (VIN VG VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
     N1 (VBOTT VG VX GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
     N0 (VX CLKS VBOTT GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    P4 (VOUT CLKS_ VIN VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
+    P4 (VOUT CLKS_ VIN VDD) ami06P w=19.05u l=600n as=2.8575e-11 \
+        ad=2.8575e-11 ps=41.1u pd=41.1u m=1 region=sat
     P3 (VG VX VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
     P2 (VDD VG VTOP VTOP) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    P1 (VX CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    P0 (CLKS_ CLKS VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
+    P1 (VX CLKS VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    P0 (CLKS_ CLKS VDD VDD) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
     C1 (VOUT GND) capacitor c=1p
     C0 (VTOP VBOTT) capacitor c=1p
 ends BOOT_THA
@@ -48,8 +48,8 @@ ends BOOT_THA
 I0 (CLKS 0 VDD VIN VOUT) BOOT_THA
 V0 (VDD 0) vsource dc=5 type=dc
 V1 (VIN 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
-V2 (CLKS 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p fall=10p \
-        width=100n
+V2 (CLKS 0) vsource type=pulse val0=0 val1=5 period=100n rise=10p fall=10p \
+        width=50n
 simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
     tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
     digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \

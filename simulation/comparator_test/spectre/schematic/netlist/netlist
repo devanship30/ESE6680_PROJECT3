@@ -3,19 +3,35 @@
 // Cell name: Final_StaticComparator
 // View name: schematic
 subckt Final_StaticComparator Gnd STROBE Vdd Vi1 Vi2 Vo1 Vo2
-    I0 (net58 Gnd) isource type=dc dc=30u m=1
-    N1 (Vo1 Vi2 net58 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
-        ps=27.0u pd=27.0u m=1 region=sat
-    N0 (Vo2 Vi1 net58 Gnd) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
-        ps=27.0u pd=27.0u m=1 region=sat
-    P1 (Vo2 Vo1 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
-        ps=27.0u pd=27.0u m=1 region=sat
-    P0 (Vo1 Vo2 Vdd Vdd) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
-        ps=27.0u pd=27.0u m=1 region=sat
-    P2 (Vo1 STROBE Vo2 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
-        pd=9u m=1 region=sat
-    P3 (Vo2 STROBE Vo1 Vdd) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
-        pd=9u m=1 region=sat
+    I0 (net58 Gnd) isource type=dc dc=60u m=1
+    P7 (net023 STROBE net09 net029) ami06P w=10.05u l=600n as=1.5075e-11 \
+        ad=1.5075e-11 ps=23.1u pd=23.1u m=1 region=sat
+    P6 (net09 STROBE net023 net029) ami06P w=10.05u l=600n as=1.5075e-11 \
+        ad=1.5075e-11 ps=23.1u pd=23.1u m=1 region=sat
+    P5 (Vdd net03 Vo2 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P4 (Vdd net09 net03 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P3 (Vdd net023 net09 Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P2 (net023 net09 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P1 (Vo1 net018 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (net018 net023 Vdd Vdd) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N5 (Vo1 net018 Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N4 (net018 net023 Gnd Gnd) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N1 (Gnd net09 net03 Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (Gnd net03 Vo2 Gnd) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N2 (net09 Vi1 net58 net026) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    N3 (net58 Vi2 net023 net026) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
 ends Final_StaticComparator
 // End of subcircuit definition.
 
@@ -26,5 +42,5 @@ I0 (0 STROBE net3 Vi1 Vi2 Vo1 Vo2) Final_StaticComparator
 V2 (Vi2 0) vsource dc=2.5 type=dc
 V0 (net3 0) vsource dc=5 type=dc
 V1 (Vi1 0) vsource dc=2.5 type=sine ampl=1.5 freq=1M
-V3 (STROBE 0) vsource type=pulse val0=0 val1=5 period=200n rise=10p \
-        fall=10p width=100n
+V3 (STROBE 0) vsource type=pulse val0=5 val1=0 period=200n rise=200p \
+        width=100n

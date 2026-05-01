@@ -1,5 +1,5 @@
 // Generated for: spectre
-// Generated on: Apr 29 08:59:34 2026
+// Generated on: May  1 14:19:19 2026
 // Design library name: ESE6680_PROJECT3
 // Design cell name: mdac_test
 // Design view name: schematic
@@ -8,67 +8,67 @@ global 0
 include "/lcars/home/e/ese6680/ami06.scs"
 
 // Library name: ESE6680_PROJECT3
-// Cell name: m_opamp
+// Cell name: opamp_project_1
 // View name: schematic
-subckt m_opamp GND VDD Vin\+ Vin\- Vout
-    M4 (net77 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
-        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
-    M3 (net74 net74 GND GND) ami06N w=8.7u l=1.8u as=1.305e-11 \
-        ad=1.305e-11 ps=20.4u pd=20.4u m=1 region=sat
-    M6 (Vout net77 GND GND) ami06N w=58.05u l=900n as=8.7075e-11 \
-        ad=8.7075e-11 ps=119.1u pd=119.1u m=1 region=sat
-    M7 (Vout net73 VDD VDD) ami06P w=133.95u l=1.2u as=2.00925e-10 \
-        ad=2.00925e-10 ps=270.9u pd=270.9u m=1 region=sat
-    M5 (net81 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
-        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
-    M8 (net73 net73 VDD VDD) ami06P w=40.05u l=1.2u as=6.0075e-11 \
-        ad=6.0075e-11 ps=83.1u pd=83.1u m=1 region=sat
-    M2 (net77 Vin\+ net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
-        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
-    M1 (net74 Vin\- net81 VDD) ami06P w=49.95u l=1.8u as=7.4925e-11 \
-        ad=7.4925e-11 ps=102.9u pd=102.9u m=1 region=sat
-    Iref (net73 GND) isource type=dc dc=60u m=1
-    Cc (net84 Vout) capacitor c=1p m=1
-    Rc (net77 net84) resistor r=1K m=1
-ends m_opamp
+subckt opamp_project_1 Gnd Output Vdd Vin\+ Vin\-
+    M6 (Output net55 Gnd Gnd) ami06N w=60u l=1.65u as=9e-11 ad=9e-11 \
+        ps=123.000000u pd=123.000000u m=1 region=sat
+    M3 (net49 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    M4 (net55 net49 Gnd Gnd) ami06N w=16.5u l=3u as=2.475e-11 ad=2.475e-11 \
+        ps=36.0u pd=36.0u m=1 region=sat
+    Rc (net55 net59) resistor r=4.15K m=1
+    Cc (net59 Output) capacitor c=1.1p m=1
+    M7 (Output net48 Vdd Vdd) ami06P w=268.05u l=3u as=4.02075e-10 \
+        ad=4.02075e-10 ps=539.1u pd=539.1u m=1 region=sat
+    M8 (net48 net48 Vdd Vdd) ami06P w=43.95u l=3u as=6.5925e-11 \
+        ad=6.5925e-11 ps=90.9u pd=90.9u m=1 region=sat
+    M5 (net52 net48 Vdd Vdd) ami06P w=37.05u l=1.8u as=5.5575e-11 \
+        ad=5.5575e-11 ps=77.1u pd=77.1u m=1 region=sat
+    M1 (net49 Vin\- net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    M2 (net55 Vin\+ net52 net52) ami06P w=115.05u l=3u as=1.72575e-10 \
+        ad=1.72575e-10 ps=233.1u pd=233.1u m=1 region=sat
+    I13 (net48 Gnd) isource type=dc dc=40u m=1
+ends opamp_project_1
 // End of subcircuit definition.
 
 // Library name: ESE6680_PROJECT3
 // Cell name: Final_MDAC
 // View name: schematic
 subckt Final_MDAC GND Phi1 Phi1E Phi2 VDD Vin\+ Vin\- Vout
-    N2 (Vout Phi2 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N1 (net102 Phi1 net100 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+    Cf (Cf_top net5) cap
+    Cs (Cs_top net5) cap
+    N10 (Cs_top Phi1 Vin\+ GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    N0 (net99 Phi1E net107 GND) ami06N w=1.5u l=600n as=2.25e-12 \
+    N9 (Cf_top Phi1 Vin\+ GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    N3 (Vin\+ Phi2 net97 GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N4 (net97 Phi1 Vin\- GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N6 (iPhi2 Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    N5 (iPhi1 Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
-        ps=6u pd=6u m=1 region=sat
-    P1 (Vout iPhi2 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+    N8 (Cs_top Phi2 Vin\- GND) ami06P w=1.5u l=600n as=2.25e-12 \
         ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P2 (net102 iPhi1 net100 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P0 (net97 iPhi1 Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P3 (Vin\+ iPhi2 net97 VDD) ami06P w=1.5u l=600n as=2.25e-12 \
-        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
-    P5 (iPhi2 Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+    N7 (\2\.5V Phi2 Vout GND) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    P4 (iPhi1 Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+    N6 (Cf_top Phi1 Vout GND) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
         ps=6u pd=6u m=1 region=sat
-    Cf (net99 net100) capacitor c=1p m=1
-    Cs (net97 net99) capacitor c=2p m=1
-    V2 (net102 GND) vsource type=dc dc=2.5
-    V0 (net106 GND) vsource type=dc dc=2.5
-    V1 (net107 GND) vsource type=dc dc=2.5
-    I0 (GND VDD net106 net99 Vout) m_opamp
+    N1 (Phi2\' Phi2 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    N0 (Phi1\' Phi1 GND GND) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    I1 (GND Vout VDD \2\.5V net5) opamp_project_1
+    P12 (Cs_top Phi1\' Vin\+ VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P11 (Cf_top Phi1\' Vin\+ VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P10 (Cs_top Phi2\' Vin\- VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P9 (\2\.5V Phi2\' Vout VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P8 (Cf_top Phi1\' Vout VDD) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    P1 (Phi2\' Phi2 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    P0 (Phi1\' Phi1 VDD VDD) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    V0 (\2\.5V 0) vsource dc=2.5 type=dc
 ends Final_MDAC
 // End of subcircuit definition.
 
@@ -100,3 +100,4 @@ designParamVals info what=parameters where=rawfile
 primitives info what=primitives where=rawfile
 subckts info what=subckts where=rawfile
 saveOptions options save=allpub
+ahdl_include "/lcars/software/linux/x86_64/ic-design/cadence/IC618/tools/dfII/samples/artist/ahdlLib/cap/veriloga/veriloga.va"

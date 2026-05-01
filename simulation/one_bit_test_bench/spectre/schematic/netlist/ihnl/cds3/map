@@ -1,0 +1,7 @@
+( ( model
+( "non_overlapping_clock" "non_overlapping_clock" )
+( "buffer" "buffer" )
+( "nand" "nand" )
+( "inv" "inv" )
+ )
+ )

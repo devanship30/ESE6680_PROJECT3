@@ -1,0 +1,3 @@
+    I0 (CLKIN SR1IP GND SR1OP VDD) DFF
+ends SR1
+// End of subcircuit definition.

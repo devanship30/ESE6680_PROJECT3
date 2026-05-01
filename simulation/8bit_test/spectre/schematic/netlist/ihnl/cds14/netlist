@@ -1,0 +1,7 @@
+    I4 (CLKIN net40 GND SR5OP VDD) DFF
+    I3 (CLKIN net43 GND net40 VDD) DFF
+    I2 (CLKIN net41 GND net43 VDD) DFF
+    I1 (CLKIN net42 GND net41 VDD) DFF
+    I0 (CLKIN SR5IP GND net42 VDD) DFF
+ends SR5
+// End of subcircuit definition.
